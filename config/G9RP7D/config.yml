@@ -1,0 +1,9 @@
+# See config.example.yml for documentation.
+object_base: orig/G9RP7D
+object: sys/main.dol
+hash: ee4a49aa96c9a40649c27f608bd19e9b0063c5d3
+symbols: config/G9RP7D/symbols.txt
+splits: config/G9RP7D/splits.txt
+# Change this to match the linker version.
+# See config.example.yml for a list.
+mw_comment_version: 11

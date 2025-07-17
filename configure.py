@@ -30,6 +30,7 @@ from tools.project import (
 DEFAULT_VERSION = 0
 VERSIONS = [
     "G9RE7D",  # 0
+    "G9RP7D",
 ]
 
 parser = argparse.ArgumentParser()
