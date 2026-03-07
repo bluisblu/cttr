@@ -1,1 +1,1130 @@
-// Intentionally empty. Initial analysis will generate this automatically.
+Sections:
+	.init       type:code align:4
+	extab       type:rodata align:32
+	extabindex  type:rodata align:32
+	.text       type:code align:8
+	.ctors      type:rodata align:32
+	.dtors      type:rodata align:4
+	.rodata     type:rodata align:64
+	.data       type:data align:32
+	.bss        type:bss align:8
+	.sdata      type:data align:4
+	.sbss       type:bss align:8
+	.sdata2     type:rodata align:32
+	.sbss2      type:bss align:32
+
+CTTR/Controller.cpp:
+	.text       start:0x80005860 end:0x8000B0BC
+	.ctors      start:0x80388624 end:0x80388628
+	.rodata     start:0x80388A80 end:0x80388AA8
+	.data       start:0x80395400 end:0x80395888
+	.bss        start:0x8040B200 end:0x8040B568
+	.sdata      start:0x804A3980 end:0x804A3A08
+	.sbss       start:0x804AD580 end:0x804AD5A8
+	.sdata2     start:0x804AEF80 end:0x804AEFA8
+
+auto/auto_8000B0BC.cpp:
+	.text       start:0x8000B0BC end:0x8000B3E4
+	.ctors      start:0x80388628 end:0x8038862C
+
+auto/auto_8000B3E4.cpp:
+	.text       start:0x8000B3E4 end:0x8000CAF8
+	.ctors      start:0x8038862C end:0x80388630
+
+auto/auto_8000CAF8.cpp:
+	.text       start:0x8000CAF8 end:0x8000DC50
+	.ctors      start:0x80388630 end:0x80388634
+
+auto/auto_8000DC50.cpp:
+	.text       start:0x8000DC50 end:0x80012620
+	.ctors      start:0x80388634 end:0x80388638
+	.data       start:0x80395B08 end:0x80396E58
+	.bss        start:0x8040B5C8 end:0x8040C9C0
+	.sdata      start:0x804A3AA0 end:0x804A3AF8
+	.sbss       start:0x804AD5B8 end:0x804AD5C0
+
+auto/auto_80012620.cpp:
+	.text       start:0x80012620 end:0x80013F40
+	.ctors      start:0x80388638 end:0x8038863C
+
+auto/auto_80013F40.cpp:
+	.text       start:0x80013F40 end:0x8001DD24
+	.ctors      start:0x8038863C end:0x80388640
+
+auto/auto_8001DD24.cpp:
+	.text       start:0x8001DD24 end:0x8001FAA8
+	.ctors      start:0x80388640 end:0x80388644
+
+auto/auto_8001FAA8.cpp:
+	.text       start:0x8001FAA8 end:0x8001FF04
+	.ctors      start:0x80388644 end:0x80388648
+
+auto/auto_8001FF04.cpp:
+	.text       start:0x8001FF04 end:0x80023334
+	.ctors      start:0x80388648 end:0x8038864C
+
+auto/auto_80023334.cpp:
+	.text       start:0x80023334 end:0x80024240
+	.ctors      start:0x8038864C end:0x80388650
+
+auto/auto_80024240.cpp:
+	.text       start:0x80024240 end:0x80024B94
+	.ctors      start:0x80388650 end:0x80388654
+
+auto/auto_80024B94.cpp:
+	.text       start:0x80024B94 end:0x8002F92C
+	.ctors      start:0x80388654 end:0x80388658
+
+auto/auto_8002F92C.cpp:
+	.text       start:0x8002F92C end:0x80031E1C
+	.ctors      start:0x80388658 end:0x8038865C
+
+auto/auto_80031E1C.cpp:
+	.text       start:0x80031E1C end:0x80035978
+	.ctors      start:0x8038865C end:0x80388660
+
+auto/auto_80035978.cpp:
+	.text       start:0x80035978 end:0x80036718
+	.ctors      start:0x80388660 end:0x80388664
+
+auto/auto_80036718.cpp:
+	.text       start:0x80036718 end:0x8004B5A4
+	.ctors      start:0x80388664 end:0x80388668
+
+auto/auto_8004B5A4.cpp:
+	.text       start:0x8004B5A4 end:0x8004DF6C
+	.ctors      start:0x80388668 end:0x8038866C
+
+auto/auto_8004DF6C.cpp:
+	.text       start:0x8004DF6C end:0x8004E164
+	.ctors      start:0x8038866C end:0x80388670
+
+auto/auto_8004E164.cpp:
+	.text       start:0x8004E164 end:0x8004EDEC
+	.ctors      start:0x80388670 end:0x80388674
+
+auto/auto_8004EDEC.cpp:
+	.text       start:0x8004EDEC end:0x8005A9F0
+	.ctors      start:0x80388674 end:0x80388678
+
+auto/auto_8005A9F0.cpp:
+	.text       start:0x8005A9F0 end:0x8005B1EC
+	.ctors      start:0x80388678 end:0x8038867C
+
+auto/auto_8005B1EC.cpp:
+	.text       start:0x8005B1EC end:0x8005E998
+	.ctors      start:0x8038867C end:0x80388680
+
+auto/auto_8005E998.cpp:
+	.text       start:0x8005E998 end:0x8005F290
+	.ctors      start:0x80388680 end:0x80388684
+
+auto/auto_8005F290.cpp:
+	.text       start:0x8005F290 end:0x8006C5C8
+	.ctors      start:0x80388684 end:0x80388688
+
+auto/auto_8006C5C8.cpp:
+	.text       start:0x8006C5C8 end:0x8006D5A8
+	.ctors      start:0x80388688 end:0x8038868C
+
+auto/auto_8006D5A8.cpp:
+	.text       start:0x8006D5A8 end:0x8006EBF0
+	.ctors      start:0x8038868C end:0x80388690
+
+auto/auto_8006EBF0.cpp:
+	.text       start:0x8006EBF0 end:0x80070AA4
+	.ctors      start:0x80388690 end:0x80388694
+
+auto/auto_80070AA4.cpp:
+	.text       start:0x80070AA4 end:0x800712F4
+	.ctors      start:0x80388694 end:0x80388698
+
+auto/auto_800712F4.cpp:
+	.text       start:0x800712F4 end:0x800716F0
+	.ctors      start:0x80388698 end:0x8038869C
+
+auto/auto_800716F0.cpp:
+	.text       start:0x800716F0 end:0x800735D4
+	.ctors      start:0x8038869C end:0x803886A0
+
+auto/auto_800735D4.cpp:
+	.text       start:0x800735D4 end:0x800765E4
+	.ctors      start:0x803886A0 end:0x803886A4
+
+auto/auto_800765E4.cpp:
+	.text       start:0x800765E4 end:0x80078488
+	.ctors      start:0x803886A4 end:0x803886A8
+
+auto/auto_80078488.cpp:
+	.text       start:0x80078488 end:0x80084DC8
+	.ctors      start:0x803886A8 end:0x803886AC
+
+auto/auto_80084DC8.cpp:
+	.text       start:0x80084DC8 end:0x80088948
+	.ctors      start:0x803886AC end:0x803886B0
+
+auto/auto_80088948.cpp:
+	.text       start:0x80088948 end:0x80089B58
+	.ctors      start:0x803886B0 end:0x803886B4
+
+auto/auto_80089B58.cpp:
+	.text       start:0x80089B58 end:0x80093964
+	.ctors      start:0x803886B4 end:0x803886B8
+
+auto/auto_80093964.cpp:
+	.text       start:0x80093964 end:0x80097254
+	.ctors      start:0x803886B8 end:0x803886BC
+
+auto/auto_80097254.cpp:
+	.text       start:0x80097254 end:0x80097E50
+	.ctors      start:0x803886BC end:0x803886C0
+
+auto/auto_80097E50.cpp:
+	.text       start:0x80097E50 end:0x800A12E4
+	.ctors      start:0x803886C0 end:0x803886C4
+
+auto/auto_800A12E4.cpp:
+	.text       start:0x800A12E4 end:0x800A7580
+	.ctors      start:0x803886C4 end:0x803886C8
+
+auto/auto_800A7580.cpp:
+	.text       start:0x800A7580 end:0x800A9F3C
+	.ctors      start:0x803886C8 end:0x803886CC
+
+auto/auto_800A9F3C.cpp:
+	.text       start:0x800A9F3C end:0x800AC8F4
+	.ctors      start:0x803886CC end:0x803886D0
+
+auto/auto_800AC8F4.cpp:
+	.text       start:0x800AC8F4 end:0x800AD000
+	.ctors      start:0x803886D0 end:0x803886D4
+
+auto/auto_800AD000.cpp:
+	.text       start:0x800AD000 end:0x800AE4E0
+	.ctors      start:0x803886D4 end:0x803886D8
+
+auto/auto_800AE4E0.cpp:
+	.text       start:0x800AE4E0 end:0x800B0748
+	.ctors      start:0x803886D8 end:0x803886DC
+
+auto/auto_800B0748.cpp:
+	.text       start:0x800B0748 end:0x800B9498
+	.ctors      start:0x803886DC end:0x803886E0
+
+auto/auto_800B9498.cpp:
+	.text       start:0x800B9498 end:0x800BA7BC
+	.ctors      start:0x803886E0 end:0x803886E4
+
+auto/auto_800BA7BC.cpp:
+	.text       start:0x800BA7BC end:0x800BB074
+	.ctors      start:0x803886E4 end:0x803886E8
+
+auto/auto_800BB074.cpp:
+	.text       start:0x800BB074 end:0x800BBD94
+	.ctors      start:0x803886E8 end:0x803886EC
+
+auto/auto_800BBD94.cpp:
+	.text       start:0x800BBD94 end:0x800C10E8
+	.ctors      start:0x803886EC end:0x803886F0
+
+auto/auto_800C10E8.cpp:
+	.text       start:0x800C10E8 end:0x800C570C
+	.ctors      start:0x803886F0 end:0x803886F4
+
+auto/auto_800C570C.cpp:
+	.text       start:0x800C570C end:0x800C7320
+	.ctors      start:0x803886F4 end:0x803886F8
+
+auto/auto_800C7320.cpp:
+	.text       start:0x800C7320 end:0x800C8BB0
+	.ctors      start:0x803886F8 end:0x803886FC
+
+auto/auto_800C8BB0.cpp:
+	.text       start:0x800C8BB0 end:0x800CA2BC
+	.ctors      start:0x803886FC end:0x80388700
+
+auto/auto_800CA2BC.cpp:
+	.text       start:0x800CA2BC end:0x800CB4CC
+	.ctors      start:0x80388700 end:0x80388704
+
+auto/auto_800CB4CC.cpp:
+	.text       start:0x800CB4CC end:0x800CD628
+	.ctors      start:0x80388704 end:0x80388708
+
+auto/auto_800CD628.cpp:
+	.text       start:0x800CD628 end:0x800CFC84
+	.ctors      start:0x80388708 end:0x8038870C
+
+auto/auto_800CFC84.cpp:
+	.text       start:0x800CFC84 end:0x800FF950
+	.ctors      start:0x8038870C end:0x80388710
+
+auto/auto_800FF950.cpp:
+	.text       start:0x800FF950 end:0x80109A64
+	.ctors      start:0x80388710 end:0x80388714
+
+auto/auto_80109A64.cpp:
+	.text       start:0x80109A64 end:0x801179BC
+	.ctors      start:0x80388714 end:0x80388718
+
+auto/auto_801179BC.cpp:
+	.text       start:0x801179BC end:0x80128B50
+	.ctors      start:0x80388718 end:0x8038871C
+
+auto/auto_80128B50.cpp:
+	.text       start:0x80128B50 end:0x8012D4E8
+	.ctors      start:0x8038871C end:0x80388720
+
+auto/auto_8012D4E8.cpp:
+	.text       start:0x8012D4E8 end:0x8012E678
+	.ctors      start:0x80388720 end:0x80388724
+
+auto/auto_8012E678.cpp:
+	.text       start:0x8012E678 end:0x8012F770
+	.ctors      start:0x80388724 end:0x80388728
+
+auto/auto_8012F770.cpp:
+	.text       start:0x8012F770 end:0x8012F930
+	.ctors      start:0x80388728 end:0x8038872C
+
+auto/auto_8012F930.cpp:
+	.text       start:0x8012F930 end:0x801338FC
+	.ctors      start:0x8038872C end:0x80388730
+
+auto/auto_801338FC.cpp:
+	.text       start:0x801338FC end:0x80138744
+	.ctors      start:0x80388730 end:0x80388734
+
+auto/auto_80138744.cpp:
+	.text       start:0x80138744 end:0x80139514
+	.ctors      start:0x80388734 end:0x80388738
+
+auto/auto_80139514.cpp:
+	.text       start:0x80139514 end:0x80148090
+	.ctors      start:0x80388738 end:0x8038873C
+
+auto/auto_80148090.cpp:
+	.text       start:0x80148090 end:0x8014C208
+	.ctors      start:0x8038873C end:0x80388740
+
+auto/auto_8014C208.cpp:
+	.text       start:0x8014C208 end:0x8014DA60
+	.ctors      start:0x80388740 end:0x80388744
+
+auto/auto_8014DA60.cpp:
+	.text       start:0x8014DA60 end:0x8014E6E4
+	.ctors      start:0x80388744 end:0x80388748
+
+auto/auto_8014E6E4.cpp:
+	.text       start:0x8014E6E4 end:0x801556B0
+	.ctors      start:0x80388748 end:0x8038874C
+
+auto/auto_801556B0.cpp:
+	.text       start:0x801556B0 end:0x80155F68
+	.ctors      start:0x8038874C end:0x80388750
+
+auto/auto_80155F68.cpp:
+	.text       start:0x80155F68 end:0x8015679C
+	.ctors      start:0x80388750 end:0x80388754
+
+auto/auto_8015679C.cpp:
+	.text       start:0x8015679C end:0x80156B30
+	.ctors      start:0x80388754 end:0x80388758
+
+auto/auto_80156B30.cpp:
+	.text       start:0x80156B30 end:0x80158570
+	.ctors      start:0x80388758 end:0x8038875C
+
+auto/auto_80158570.cpp:
+	.text       start:0x80158570 end:0x801599C0
+	.ctors      start:0x8038875C end:0x80388760
+
+auto/auto_801599C0.cpp:
+	.text       start:0x801599C0 end:0x801605A0
+	.ctors      start:0x80388760 end:0x80388764
+
+auto/auto_801605A0.cpp:
+	.text       start:0x801605A0 end:0x80166A88
+	.ctors      start:0x80388764 end:0x80388768
+
+auto/auto_80166A88.cpp:
+	.text       start:0x80166A88 end:0x80168E04
+	.ctors      start:0x80388768 end:0x8038876C
+
+auto/auto_80168E04.cpp:
+	.text       start:0x80168E04 end:0x8016AE44
+	.ctors      start:0x8038876C end:0x80388770
+
+auto/auto_8016AE44.cpp:
+	.text       start:0x8016AE44 end:0x80173820
+	.ctors      start:0x80388770 end:0x80388774
+
+auto/auto_80173820.cpp:
+	.text       start:0x80173820 end:0x80174DEC
+	.ctors      start:0x80388774 end:0x80388778
+
+auto/auto_80174DEC.cpp:
+	.text       start:0x80174DEC end:0x801779E4
+	.ctors      start:0x80388778 end:0x8038877C
+
+auto/auto_801779E4.cpp:
+	.text       start:0x801779E4 end:0x80179F5C
+	.ctors      start:0x8038877C end:0x80388780
+
+auto/auto_80179F5C.cpp:
+	.text       start:0x80179F5C end:0x8017A1DC
+	.ctors      start:0x80388780 end:0x80388784
+
+auto/auto_8017A1DC.cpp:
+	.text       start:0x8017A1DC end:0x8017D28C
+	.ctors      start:0x80388784 end:0x80388788
+
+auto/auto_8017D28C.cpp:
+	.text       start:0x8017D28C end:0x80181A40
+	.ctors      start:0x80388788 end:0x8038878C
+
+auto/auto_80181A40.cpp:
+	.text       start:0x80181A40 end:0x80182C70
+	.ctors      start:0x8038878C end:0x80388790
+
+auto/auto_80182C70.cpp:
+	.text       start:0x80182C70 end:0x80183568
+	.ctors      start:0x80388790 end:0x80388794
+
+auto/auto_80183568.cpp:
+	.text       start:0x80183568 end:0x80184038
+	.ctors      start:0x80388794 end:0x80388798
+
+auto/auto_80184038.cpp:
+	.text       start:0x80184038 end:0x801860E8
+	.ctors      start:0x80388798 end:0x8038879C
+
+auto/auto_801860E8.cpp:
+	.text       start:0x801860E8 end:0x80189AAC
+	.ctors      start:0x8038879C end:0x803887A0
+
+auto/auto_80189AAC.cpp:
+	.text       start:0x80189AAC end:0x8018BB4C
+	.ctors      start:0x803887A0 end:0x803887A4
+
+auto/auto_8018BB4C.cpp:
+	.text       start:0x8018BB4C end:0x8018C7AC
+	.ctors      start:0x803887A4 end:0x803887A8
+
+CTTR/Player.cpp:
+	.text       start:0x8018C7AC end:0x8018E1E0
+	.ctors      start:0x803887A8 end:0x803887AC
+
+CTTR/Skin.cpp:
+	.text       start:0x8018E1E0 end:0x801908E0
+	.ctors      start:0x803887AC end:0x803887B0
+
+auto/auto_801908E0.cpp:
+	.text       start:0x801908E0 end:0x80190DF0
+	.ctors      start:0x803887B0 end:0x803887B4
+
+auto/auto_80190DF0.cpp:
+	.text       start:0x80190DF0 end:0x801947D0
+	.ctors      start:0x803887B4 end:0x803887B8
+
+auto/auto_801947D0.cpp:
+	.text       start:0x801947D0 end:0x80195DD0
+	.ctors      start:0x803887B8 end:0x803887BC
+
+auto/auto_80195DD0.cpp:
+	.text       start:0x80195DD0 end:0x80196100
+	.ctors      start:0x803887BC end:0x803887C0
+
+auto/auto_80196100.cpp:
+	.text       start:0x80196100 end:0x80199338
+	.ctors      start:0x803887C0 end:0x803887C4
+
+auto/auto_80199338.cpp:
+	.text       start:0x80199338 end:0x801AA510
+	.ctors      start:0x803887C4 end:0x803887C8
+
+auto/auto_801AA510.cpp:
+	.text       start:0x801AA510 end:0x801AD70C
+	.ctors      start:0x803887C8 end:0x803887CC
+
+auto/auto_801AD70C.cpp:
+	.text       start:0x801AD70C end:0x801B31F8
+	.ctors      start:0x803887CC end:0x803887D0
+
+auto/auto_801B31F8.cpp:
+	.text       start:0x801B31F8 end:0x801B58E4
+	.ctors      start:0x803887D0 end:0x803887D4
+
+auto/auto_801B58E4.cpp:
+	.text       start:0x801B58E4 end:0x801BF138
+	.ctors      start:0x803887D4 end:0x803887D8
+
+auto/auto_801BF138.cpp:
+	.text       start:0x801BF138 end:0x801C2108
+	.ctors      start:0x803887D8 end:0x803887DC
+
+auto/auto_801C2108.cpp:
+	.text       start:0x801C2108 end:0x801C45F4
+	.ctors      start:0x803887DC end:0x803887E0
+
+auto/auto_801C45F4.cpp:
+	.text       start:0x801C45F4 end:0x801C6460
+	.ctors      start:0x803887E0 end:0x803887E4
+
+auto/auto_801C6460.cpp:
+	.text       start:0x801C6460 end:0x801C6630
+	.ctors      start:0x803887E4 end:0x803887E8
+
+auto/auto_801C6630.cpp:
+	.text       start:0x801C6630 end:0x801C7360
+	.ctors      start:0x803887E8 end:0x803887EC
+
+auto/auto_801C7360.cpp:
+	.text       start:0x801C7360 end:0x801C762C
+	.ctors      start:0x803887EC end:0x803887F0
+
+auto/auto_801C762C.cpp:
+	.text       start:0x801C762C end:0x801C7758
+	.ctors      start:0x803887F0 end:0x803887F4
+
+auto/auto_801C7758.cpp:
+	.text       start:0x801C7758 end:0x801C8400
+	.ctors      start:0x803887F4 end:0x803887F8
+
+auto/auto_801C8400.cpp:
+	.text       start:0x801C8400 end:0x801C9BBC
+	.ctors      start:0x803887F8 end:0x803887FC
+
+auto/auto_801C9BBC.cpp:
+	.text       start:0x801C9BBC end:0x801C9CE8
+	.ctors      start:0x803887FC end:0x80388800
+
+auto/auto_801C9CE8.cpp:
+	.text       start:0x801C9CE8 end:0x801CAE5C
+	.ctors      start:0x80388800 end:0x80388804
+
+auto/auto_801CAE5C.cpp:
+	.text       start:0x801CAE5C end:0x801CB50C
+	.ctors      start:0x80388804 end:0x80388808
+
+auto/auto_801CB50C.cpp:
+	.text       start:0x801CB50C end:0x801CB820
+	.ctors      start:0x80388808 end:0x8038880C
+
+auto/auto_801CB820.cpp:
+	.text       start:0x801CB820 end:0x801CD2AC
+	.ctors      start:0x8038880C end:0x80388810
+
+auto/auto_801CD2AC.cpp:
+	.text       start:0x801CD2AC end:0x801CDCCC
+	.ctors      start:0x80388810 end:0x80388814
+
+auto/auto_801CDCCC.cpp:
+	.text       start:0x801CDCCC end:0x801CE3B0
+	.ctors      start:0x80388814 end:0x80388818
+
+auto/auto_801CE3B0.cpp:
+	.text       start:0x801CE3B0 end:0x801CEDB4
+	.ctors      start:0x80388818 end:0x8038881C
+
+auto/auto_801CEDB4.cpp:
+	.text       start:0x801CEDB4 end:0x801CFB10
+	.ctors      start:0x8038881C end:0x80388820
+
+auto/auto_801CFB10.cpp:
+	.text       start:0x801CFB10 end:0x801D0AD4
+	.ctors      start:0x80388820 end:0x80388824
+
+auto/auto_801D0AD4.cpp:
+	.text       start:0x801D0AD4 end:0x801D46C4
+	.ctors      start:0x80388824 end:0x80388828
+
+auto/auto_801D46C4.cpp:
+	.text       start:0x801D46C4 end:0x801D5FA0
+	.ctors      start:0x80388828 end:0x8038882C
+
+auto/auto_801D5FA0.cpp:
+	.text       start:0x801D5FA0 end:0x801D7A9C
+	.ctors      start:0x8038882C end:0x80388830
+
+auto/auto_801D7A9C.cpp:
+	.text       start:0x801D7A9C end:0x801D85AC
+	.ctors      start:0x80388830 end:0x80388834
+
+auto/auto_801D85AC.cpp:
+	.text       start:0x801D85AC end:0x801DA638
+	.ctors      start:0x80388834 end:0x80388838
+
+auto/auto_801DA638.cpp:
+	.text       start:0x801DA638 end:0x801DAC18
+	.ctors      start:0x80388838 end:0x8038883C
+
+auto/auto_801DAC18.cpp:
+	.text       start:0x801DAC18 end:0x801DC760
+	.ctors      start:0x8038883C end:0x80388840
+
+auto/auto_801DC760.cpp:
+	.text       start:0x801DC760 end:0x801E1154
+	.ctors      start:0x80388840 end:0x80388844
+
+auto/auto_801E1154.cpp:
+	.text       start:0x801E1154 end:0x801E1A14
+	.ctors      start:0x80388844 end:0x80388848
+
+auto/auto_801E1A14.cpp:
+	.text       start:0x801E1A14 end:0x801E2328
+	.ctors      start:0x80388848 end:0x8038884C
+
+auto/auto_801E2328.cpp:
+	.text       start:0x801E2328 end:0x801E39A0
+	.ctors      start:0x8038884C end:0x80388850
+
+auto/auto_801E39A0.cpp:
+	.text       start:0x801E39A0 end:0x801E4B64
+	.ctors      start:0x80388850 end:0x80388854
+
+auto/auto_801E4B64.cpp:
+	.text       start:0x801E4B64 end:0x801E6774
+	.ctors      start:0x80388854 end:0x80388858
+
+auto/auto_801E6774.cpp:
+	.text       start:0x801E6774 end:0x801E7CA4
+	.ctors      start:0x80388858 end:0x8038885C
+
+auto/auto_801E7CA4.cpp:
+	.text       start:0x801E7CA4 end:0x801E84C4
+	.ctors      start:0x8038885C end:0x80388860
+
+auto/auto_801E84C4.cpp:
+	.text       start:0x801E84C4 end:0x801E9114
+	.ctors      start:0x80388860 end:0x80388864
+
+auto/auto_801E9114.cpp:
+	.text       start:0x801E9114 end:0x801EEF5C
+	.ctors      start:0x80388864 end:0x80388868
+
+auto/auto_801EEF5C.cpp:
+	.text       start:0x801EEF5C end:0x801F009C
+	.ctors      start:0x80388868 end:0x8038886C
+
+auto/auto_801F009C.cpp:
+	.text       start:0x801F009C end:0x801F0B08
+	.ctors      start:0x8038886C end:0x80388870
+
+auto/auto_801F0B08.cpp:
+	.text       start:0x801F0B08 end:0x801F1074
+	.ctors      start:0x80388870 end:0x80388874
+
+auto/auto_801F1074.cpp:
+	.text       start:0x801F1074 end:0x801F3530
+	.ctors      start:0x80388874 end:0x80388878
+
+auto/auto_801F3530.cpp:
+	.text       start:0x801F3530 end:0x801F43E8
+	.ctors      start:0x80388878 end:0x8038887C
+
+auto/auto_801F43E8.cpp:
+	.text       start:0x801F43E8 end:0x801F7180
+	.ctors      start:0x8038887C end:0x80388880
+
+auto/auto_801F7180.cpp:
+	.text       start:0x801F7180 end:0x801F9754
+	.ctors      start:0x80388880 end:0x80388884
+
+auto/auto_801F9754.cpp:
+	.text       start:0x801F9754 end:0x801FD890
+	.ctors      start:0x80388884 end:0x80388888
+
+auto/auto_801FD890.cpp:
+	.text       start:0x801FD890 end:0x801FE7A0
+	.ctors      start:0x80388888 end:0x8038888C
+
+auto/auto_801FE7A0.cpp:
+	.text       start:0x801FE7A0 end:0x80200044
+	.ctors      start:0x8038888C end:0x80388890
+
+auto/auto_80200044.cpp:
+	.text       start:0x80200044 end:0x80202520
+	.ctors      start:0x80388890 end:0x80388894
+
+auto/auto_80202520.cpp:
+	.text       start:0x80202520 end:0x80203D30
+	.ctors      start:0x80388894 end:0x80388898
+
+auto/auto_80203D30.cpp:
+	.text       start:0x80203D30 end:0x80208FF8
+	.ctors      start:0x80388898 end:0x8038889C
+
+auto/auto_80208FF8.cpp:
+	.text       start:0x80208FF8 end:0x8020C474
+	.ctors      start:0x8038889C end:0x803888A0
+
+auto/auto_8020C474.cpp:
+	.text       start:0x8020C474 end:0x8020C978
+	.ctors      start:0x803888A0 end:0x803888A4
+
+auto/auto_8020C978.cpp:
+	.text       start:0x8020C978 end:0x8020D550
+	.ctors      start:0x803888A4 end:0x803888A8
+
+auto/auto_8020D550.cpp:
+	.text       start:0x8020D550 end:0x80211B1C
+	.ctors      start:0x803888A8 end:0x803888AC
+
+auto/auto_80211B1C.cpp:
+	.text       start:0x80211B1C end:0x80213138
+	.ctors      start:0x803888AC end:0x803888B0
+
+auto/auto_80213138.cpp:
+	.text       start:0x80213138 end:0x8021727C
+	.ctors      start:0x803888B0 end:0x803888B4
+
+auto/auto_8021727C.cpp:
+	.text       start:0x8021727C end:0x8021A3EC
+	.ctors      start:0x803888B4 end:0x803888B8
+
+auto/auto_8021A3EC.cpp:
+	.text       start:0x8021A3EC end:0x8021D748
+	.ctors      start:0x803888B8 end:0x803888BC
+
+auto/auto_8021D748.cpp:
+	.text       start:0x8021D748 end:0x8022BC60
+	.ctors      start:0x803888BC end:0x803888C0
+
+auto/auto_8022BC60.cpp:
+	.text       start:0x8022BC60 end:0x8022D6A4
+	.ctors      start:0x803888C0 end:0x803888C4
+
+auto/auto_8022D6A4.cpp:
+	.text       start:0x8022D6A4 end:0x802329B4
+	.ctors      start:0x803888C4 end:0x803888C8
+
+auto/auto_802329B4.cpp:
+	.text       start:0x802329B4 end:0x80232CC0
+	.ctors      start:0x803888C8 end:0x803888CC
+
+auto/auto_80232CC0.cpp:
+	.text       start:0x80232CC0 end:0x80233F00
+	.ctors      start:0x803888CC end:0x803888D0
+
+auto/auto_80233F00.cpp:
+	.text       start:0x80233F00 end:0x80234DAC
+	.ctors      start:0x803888D0 end:0x803888D4
+
+auto/auto_80234DAC.cpp:
+	.text       start:0x80234DAC end:0x80235848
+	.ctors      start:0x803888D4 end:0x803888D8
+
+auto/auto_80235848.cpp:
+	.text       start:0x80235848 end:0x8023E3C4
+	.ctors      start:0x803888D8 end:0x803888DC
+
+auto/auto_8023E3C4.cpp:
+	.text       start:0x8023E3C4 end:0x80244CF4
+	.ctors      start:0x803888DC end:0x803888E0
+
+auto/auto_80244CF4.cpp:
+	.text       start:0x80244CF4 end:0x80252C38
+	.ctors      start:0x803888E0 end:0x803888E4
+
+auto/auto_80252C38.cpp:
+	.text       start:0x80252C38 end:0x802537D0
+	.ctors      start:0x803888E4 end:0x803888E8
+
+auto/auto_802537D0.cpp:
+	.text       start:0x802537D0 end:0x802546F4
+	.ctors      start:0x803888E8 end:0x803888EC
+
+auto/auto_802546F4.cpp:
+	.text       start:0x802546F4 end:0x80254F4C
+	.ctors      start:0x803888EC end:0x803888F0
+
+auto/auto_80254F4C.cpp:
+	.text       start:0x80254F4C end:0x80255A18
+	.ctors      start:0x803888F0 end:0x803888F4
+
+auto/auto_80255A18.cpp:
+	.text       start:0x80255A18 end:0x80257694
+	.ctors      start:0x803888F4 end:0x803888F8
+
+auto/auto_80257694.cpp:
+	.text       start:0x80257694 end:0x8025AC64
+	.ctors      start:0x803888F8 end:0x803888FC
+
+auto/auto_8025AC64.cpp:
+	.text       start:0x8025AC64 end:0x8025AF90
+	.ctors      start:0x803888FC end:0x80388900
+
+auto/auto_8025AF90.cpp:
+	.text       start:0x8025AF90 end:0x8025B3B4
+	.ctors      start:0x80388900 end:0x80388904
+
+auto/auto_8025B3B4.cpp:
+	.text       start:0x8025B3B4 end:0x8025FFEC
+	.ctors      start:0x80388904 end:0x80388908
+
+auto/auto_8025FFEC.cpp:
+	.text       start:0x8025FFEC end:0x80260238
+	.ctors      start:0x80388908 end:0x8038890C
+
+auto/auto_80260238.cpp:
+	.text       start:0x80260238 end:0x80260D98
+	.ctors      start:0x8038890C end:0x80388910
+
+auto/auto_80260D98.cpp:
+	.text       start:0x80260D98 end:0x802610A8
+	.ctors      start:0x80388910 end:0x80388914
+
+auto/auto_802610A8.cpp:
+	.text       start:0x802610A8 end:0x80261EC4
+	.ctors      start:0x80388914 end:0x80388918
+
+auto/auto_80261EC4.cpp:
+	.text       start:0x80261EC4 end:0x80263220
+	.ctors      start:0x80388918 end:0x8038891C
+
+auto/auto_80263220.cpp:
+	.text       start:0x80263220 end:0x80263978
+	.ctors      start:0x8038891C end:0x80388920
+
+auto/auto_80263978.cpp:
+	.text       start:0x80263978 end:0x802643E0
+	.ctors      start:0x80388920 end:0x80388924
+
+auto/auto_802643E0.cpp:
+	.text       start:0x802643E0 end:0x80264D6C
+	.ctors      start:0x80388924 end:0x80388928
+
+auto/auto_80264D6C.cpp:
+	.text       start:0x80264D6C end:0x802665B0
+	.ctors      start:0x80388928 end:0x8038892C
+
+auto/auto_802665B0.cpp:
+	.text       start:0x802665B0 end:0x80267C3C
+	.ctors      start:0x8038892C end:0x80388930
+
+auto/auto_80267C3C.cpp:
+	.text       start:0x80267C3C end:0x8026893C
+	.ctors      start:0x80388930 end:0x80388934
+
+auto/auto_8026893C.cpp:
+	.text       start:0x8026893C end:0x80269B80
+	.ctors      start:0x80388934 end:0x80388938
+
+auto/auto_80269B80.cpp:
+	.text       start:0x80269B80 end:0x8026A34C
+	.ctors      start:0x80388938 end:0x8038893C
+
+auto/auto_8026A34C.cpp:
+	.text       start:0x8026A34C end:0x8026B238
+	.ctors      start:0x8038893C end:0x80388940
+
+auto/auto_8026B238.cpp:
+	.text       start:0x8026B238 end:0x8026BBE0
+	.ctors      start:0x80388940 end:0x80388944
+
+auto/auto_8026BBE0.cpp:
+	.text       start:0x8026BBE0 end:0x8026C334
+	.ctors      start:0x80388944 end:0x80388948
+
+auto/auto_8026C334.cpp:
+	.text       start:0x8026C334 end:0x8026CA34
+	.ctors      start:0x80388948 end:0x8038894C
+
+auto/auto_8026CA34.cpp:
+	.text       start:0x8026CA34 end:0x8026CECC
+	.ctors      start:0x8038894C end:0x80388950
+
+auto/auto_8026CECC.cpp:
+	.text       start:0x8026CECC end:0x8026D790
+	.ctors      start:0x80388950 end:0x80388954
+
+auto/auto_8026D790.cpp:
+	.text       start:0x8026D790 end:0x8026DF64
+	.ctors      start:0x80388954 end:0x80388958
+
+auto/auto_8026DF64.cpp:
+	.text       start:0x8026DF64 end:0x8026E904
+	.ctors      start:0x80388958 end:0x8038895C
+
+auto/auto_8026E904.cpp:
+	.text       start:0x8026E904 end:0x8026FB30
+	.ctors      start:0x8038895C end:0x80388960
+
+auto/auto_8026FB30.cpp:
+	.text       start:0x8026FB30 end:0x80270260
+	.ctors      start:0x80388960 end:0x80388964
+
+auto/auto_80270260.cpp:
+	.text       start:0x80270260 end:0x802709F4
+	.ctors      start:0x80388964 end:0x80388968
+
+auto/auto_802709F4.cpp:
+	.text       start:0x802709F4 end:0x80271218
+	.ctors      start:0x80388968 end:0x8038896C
+
+auto/auto_80271218.cpp:
+	.text       start:0x80271218 end:0x80271A9C
+	.ctors      start:0x8038896C end:0x80388970
+
+auto/auto_80271A9C.cpp:
+	.text       start:0x80271A9C end:0x802721B0
+	.ctors      start:0x80388970 end:0x80388974
+
+auto/auto_802721B0.cpp:
+	.text       start:0x802721B0 end:0x80272944
+	.ctors      start:0x80388974 end:0x80388978
+
+auto/auto_80272944.cpp:
+	.text       start:0x80272944 end:0x80273108
+	.ctors      start:0x80388978 end:0x8038897C
+
+auto/auto_80273108.cpp:
+	.text       start:0x80273108 end:0x802738FC
+	.ctors      start:0x8038897C end:0x80388980
+
+auto/auto_802738FC.cpp:
+	.text       start:0x802738FC end:0x802744C0
+	.ctors      start:0x80388980 end:0x80388984
+
+auto/auto_802744C0.cpp:
+	.text       start:0x802744C0 end:0x80274940
+	.ctors      start:0x80388984 end:0x80388988
+
+auto/auto_80274940.cpp:
+	.text       start:0x80274940 end:0x802756B4
+	.ctors      start:0x80388988 end:0x8038898C
+
+auto/auto_802756B4.cpp:
+	.text       start:0x802756B4 end:0x80275858
+	.ctors      start:0x8038898C end:0x80388990
+
+auto/auto_80275858.cpp:
+	.text       start:0x80275858 end:0x802758E4
+	.ctors      start:0x80388990 end:0x80388994
+
+auto/auto_802758E4.cpp:
+	.text       start:0x802758E4 end:0x80275D58
+	.ctors      start:0x80388994 end:0x80388998
+
+auto/auto_80275D58.cpp:
+	.text       start:0x80275D58 end:0x80277718
+	.ctors      start:0x80388998 end:0x8038899C
+
+auto/auto_80277718.cpp:
+	.text       start:0x80277718 end:0x8027AA58
+	.ctors      start:0x8038899C end:0x803889A0
+
+auto/auto_8027AA58.cpp:
+	.text       start:0x8027AA58 end:0x8027C148
+	.ctors      start:0x803889A0 end:0x803889A4
+
+auto/auto_8027C148.cpp:
+	.text       start:0x8027C148 end:0x8027CAC0
+	.ctors      start:0x803889A4 end:0x803889A8
+
+auto/auto_8027CAC0.cpp:
+	.text       start:0x8027CAC0 end:0x8027D970
+	.ctors      start:0x803889A8 end:0x803889AC
+
+auto/auto_8027D970.cpp:
+	.text       start:0x8027D970 end:0x8027EE5C
+	.ctors      start:0x803889AC end:0x803889B0
+
+auto/auto_8027EE5C.cpp:
+	.text       start:0x8027EE5C end:0x80280960
+	.ctors      start:0x803889B0 end:0x803889B4
+
+auto/auto_80280960.cpp:
+	.text       start:0x80280960 end:0x80286364
+	.ctors      start:0x803889B4 end:0x803889B8
+
+auto/auto_80286364.cpp:
+	.text       start:0x80286364 end:0x802886E8
+	.ctors      start:0x803889B8 end:0x803889BC
+
+auto/auto_802886E8.cpp:
+	.text       start:0x802886E8 end:0x8028BF44
+	.ctors      start:0x803889BC end:0x803889C0
+
+auto/auto_8028BF44.cpp:
+	.text       start:0x8028BF44 end:0x8028DCF4
+	.ctors      start:0x803889C0 end:0x803889C4
+
+auto/auto_8028DCF4.cpp:
+	.text       start:0x8028DCF4 end:0x8029B4A4
+	.ctors      start:0x803889C4 end:0x803889C8
+
+auto/auto_8029B4A4.cpp:
+	.text       start:0x8029B4A4 end:0x8029E3C0
+	.ctors      start:0x803889C8 end:0x803889CC
+
+auto/auto_8029E3C0.cpp:
+	.text       start:0x8029E3C0 end:0x8029E940
+	.ctors      start:0x803889CC end:0x803889D0
+
+auto/auto_8029E940.cpp:
+	.text       start:0x8029E940 end:0x802A03C4
+	.ctors      start:0x803889D0 end:0x803889D4
+
+auto/auto_802A03C4.cpp:
+	.text       start:0x802A03C4 end:0x802A1CB8
+	.ctors      start:0x803889D4 end:0x803889D8
+
+auto/auto_802A1CB8.cpp:
+	.text       start:0x802A1CB8 end:0x802A7188
+	.ctors      start:0x803889D8 end:0x803889DC
+
+auto/auto_802A7188.cpp:
+	.text       start:0x802A7188 end:0x802AB098
+	.ctors      start:0x803889DC end:0x803889E0
+
+auto/auto_802AB098.cpp:
+	.text       start:0x802AB098 end:0x802AB698
+	.ctors      start:0x803889E0 end:0x803889E4
+
+auto/auto_802AB698.cpp:
+	.text       start:0x802AB698 end:0x802ABD80
+	.ctors      start:0x803889E4 end:0x803889E8
+
+auto/auto_802ABD80.cpp:
+	.text       start:0x802ABD80 end:0x802AC424
+	.ctors      start:0x803889E8 end:0x803889EC
+
+auto/auto_802AC424.cpp:
+	.text       start:0x802AC424 end:0x802ACB78
+	.ctors      start:0x803889EC end:0x803889F0
+
+auto/auto_802ACB78.cpp:
+	.text       start:0x802ACB78 end:0x802ADBD8
+	.ctors      start:0x803889F0 end:0x803889F4
+
+auto/auto_802ADBD8.cpp:
+	.text       start:0x802ADBD8 end:0x802AE390
+	.ctors      start:0x803889F4 end:0x803889F8
+
+auto/auto_802AE390.cpp:
+	.text       start:0x802AE390 end:0x802AE5A0
+	.ctors      start:0x803889F8 end:0x803889FC
+
+auto/auto_802AE5A0.cpp:
+	.text       start:0x802AE5A0 end:0x802AED84
+	.ctors      start:0x803889FC end:0x80388A00
+
+auto/auto_802AED84.cpp:
+	.text       start:0x802AED84 end:0x802AFEBC
+	.ctors      start:0x80388A00 end:0x80388A04
+
+auto/auto_802AFEBC.cpp:
+	.text       start:0x802AFEBC end:0x802B14F4
+	.ctors      start:0x80388A04 end:0x80388A08
+
+auto/auto_802B14F4.cpp:
+	.text       start:0x802B14F4 end:0x802B26A8
+	.ctors      start:0x80388A08 end:0x80388A0C
+
+auto/auto_802B26A8.cpp:
+	.text       start:0x802B26A8 end:0x802B2A94
+	.ctors      start:0x80388A0C end:0x80388A10
+
+auto/auto_802B2A94.cpp:
+	.text       start:0x802B2A94 end:0x802B3174
+	.ctors      start:0x80388A10 end:0x80388A14
+
+auto/auto_802B3174.cpp:
+	.text       start:0x802B3174 end:0x802B3610
+	.ctors      start:0x80388A14 end:0x80388A18
+
+auto/auto_802B3610.cpp:
+	.text       start:0x802B3610 end:0x802B3878
+	.ctors      start:0x80388A18 end:0x80388A1C
+
+auto/auto_802B3878.cpp:
+	.text       start:0x802B3878 end:0x802B3E54
+	.ctors      start:0x80388A1C end:0x80388A20
+
+auto/auto_802B3E54.cpp:
+	.text       start:0x802B3E54 end:0x802B4240
+	.ctors      start:0x80388A20 end:0x80388A24
+
+auto/auto_802B4240.cpp:
+	.text       start:0x802B4240 end:0x802B462C
+	.ctors      start:0x80388A24 end:0x80388A28
+
+auto/auto_802B462C.cpp:
+	.text       start:0x802B462C end:0x802B487C
+	.ctors      start:0x80388A28 end:0x80388A2C
+
+auto/auto_802B487C.cpp:
+	.text       start:0x802B487C end:0x802B4E58
+	.ctors      start:0x80388A2C end:0x80388A30
+
+auto/auto_802B4E58.cpp:
+	.text       start:0x802B4E58 end:0x802B59F8
+	.ctors      start:0x80388A30 end:0x80388A34
+
+auto/auto_802B59F8.cpp:
+	.text       start:0x802B59F8 end:0x802B66E0
+	.ctors      start:0x80388A34 end:0x80388A38
+
+auto/auto_802B66E0.cpp:
+	.text       start:0x802B66E0 end:0x802B7B20
+	.ctors      start:0x80388A38 end:0x80388A3C
+
+lua/src/lapi.c:
+	.text       start:0x802BBB88 end:0x802BD820
+
+lua/src/ldebug.c:
+	.text       start:0x802C2DB4 end:0x802C420C
+
+lua/src/ldo.c:
+	.text       start:0x802C420C end:0x802C549C
+
+lua/src/ldump.c:
+	.text       start:0x802C549C end:0x802C5A68
+	.sdata      start:0x804ACE00 end:0x804ACE08
+	.sdata2     start:0x804B1BC0 end:0x804B1BC8
+
+lua/src/lfunc.c:
+	.text       start:0x802C5A68 end:0x802C5EBC
+
+lua/src/lgc.c:
+	.text       start:0x802C5EBC end:0x802C71C8
+
+lua/src/llex.c:
+	.text       start:0x802C71C8 end:0x802C8C38
+	.rodata     start:0x8038EBE8 end:0x8038EC68
+	.data       start:0x803F1AB0 end:0x803F1BD0
+	.sdata      start:0x804ACE08 end:0x804ACEC0
+
+lua/src/lstate.c:
+	.text       start:0x802CC3F8 end:0x802CCB00
+	.data       start:0x803F1E38 end:0x803F1E50
+
+lua/src/ltable.c:
+	.text       start:0x802CED58 end:0x802CFE48
+	.data       start:0x803F2140 end:0x803F2190
+	.sdata2     start:0x804B1C00 end:0x804B1C10
+
+PowerPC_EABI_Support/Runtime/Src/runtime.c:
+	.text       start:0x80330660 end:0x80330DF0
+	.rodata     start:0x803949F8 end:0x80394A10
+
+PowerPC_EABI_Support/Runtime/Src/__init_cpp_exceptions.cpp:
+	.text       start:0x80330DF0 end:0x80330E6C
+	.ctors      start:0x80388620 end:0x80388624
+	.dtors      start:0x80388A40 end:0x80388A48
+	.sdata      start:0x804AD338 end:0x804AD33C
+
+PowerPC_EABI_Support/Runtime/Src/Gecko_ExceptionPPC.cp:
+	.text       start:0x80332444 end:0x803324AC
+	.bss        start:0x8047D280 end:0x8047D290
+
+PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/abort_exit.c:
+	.text       start:0x80332628 end:0x803327B4
+	.bss        start:0x8047D290 end:0x8047D390
+	.sbss       start:0x804AE988 end:0x804AE998
+
+PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/signal.c:
+	.text       start:0x8033C7D8 end:0x8033C898
+	.bss        start:0x8047D6C8 end:0x8047D6E0
