@@ -85,7 +85,7 @@ typedef LUA_UACNUMBER l_uacNumber;
 extern void fn_801937A8(void);
 
 #ifndef lua_assert
-#define lua_assert(c) ((c) ? (void)0 : fn_801937A8())
+#define lua_assert(c) ((c) ? (void)0 : fn_801937A8()) // CTTR: Non-matching
 #endif
 
 #ifndef check_exp
