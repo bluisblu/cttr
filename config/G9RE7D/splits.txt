@@ -1074,6 +1074,9 @@ auto/auto_802B66E0.cpp:
 lua/src/lapi.c:
 	.text       start:0x802BBB88 end:0x802BD820
 
+lua/src/lcode.c:
+	.text       start:0x802C0658 end:0x802C2128
+
 lua/src/ldebug.c:
 	.text       start:0x802C2DB4 end:0x802C420C
 
