@@ -14,7 +14,7 @@ See https://decomp.dev/api for an API overview.
 [Data Progress]: https://decomp.dev/bluisblu/cttr.svg?mode=shield&measure=data&label=Data
 [progress]: https://decomp.dev/bluisblu/cttr
 
-A work-in-progress decompilation of Some Game.
+A work-in-progress decompilation of Crash Tag Team Racing.
 
 This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
 
@@ -24,6 +24,16 @@ Supported versions:
 - `G9RJ7D`: Crash Bandicoot - Gatchanko World (Japan) (Rev 0)
 
 However, the Japanese version is currently not yet split
+
+# FAQ
+
+- Q. Why _this_ game from this era of Crash? Why not (some other game)?
+
+- A. I didn't realize I needed to get people's approval first before starting a hobby project. No one's stopping you from setting up a decomp of (some other game) yourself.
+
+- Q. Why the GameCube version? Why not the PS2 or Xbox version?
+
+- A. Because decomp-toolkit, which is for GC/Wii games, massively streamlines the splitting process, which is especially helpful for games without symbols.
 
 # Dependencies
 
