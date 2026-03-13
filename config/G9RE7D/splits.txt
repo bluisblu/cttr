@@ -439,10 +439,6 @@ auto/auto_80196100.cpp:
 	.text       start:0x80196100 end:0x80199338
 	.ctors      start:0x803887C0 end:0x803887C4
 
-auto/auto_80199338.cpp:
-	.text       start:0x80199338 end:0x801AA510
-	.ctors      start:0x803887C4 end:0x803887C8
-
 auto/auto_801AA510.cpp:
 	.text       start:0x801AA510 end:0x801AD70C
 	.ctors      start:0x803887C8 end:0x803887CC
@@ -1074,8 +1070,17 @@ auto/auto_802B66E0.cpp:
 lua/src/lapi.c:
 	.text       start:0x802BBB88 end:0x802BD820
 
+lua/src/lib/lauxlib.c:
+	.text       start:0x802BD820 end:0x802BEB78
+
+lua/src/lib/lbaselib.c:
+	.text       start:0x802BEB78 end:0x802C0658
+
 lua/src/lcode.c:
 	.text       start:0x802C0658 end:0x802C2128
+
+lua/src/lib/ldblib.c:
+	.text       start:0x802C2128 end:0x802C2DB4
 
 lua/src/ldebug.c:
 	.text       start:0x802C2DB4 end:0x802C420C
@@ -1100,14 +1105,44 @@ lua/src/llex.c:
 	.data       start:0x803F1AB0 end:0x803F1BD0
 	.sdata      start:0x804ACE08 end:0x804ACEC0
 
+lua/src/lmem.c:
+	.text       start:0x802C8C38 end:0x802C8DFC
+
+lua/src/lobject.c:
+	.text       start:0x802C8DFC end:0x802C9510
+
+lua/src/lparser.c:
+	.text       start:0x802C9510 end:0x802CC3F8
+
 lua/src/lstate.c:
 	.text       start:0x802CC3F8 end:0x802CCB00
 	.data       start:0x803F1E38 end:0x803F1E50
+
+lua/src/lstring.c:
+	.text       start:0x802CCB00 end:0x802CCE94
+
+lua/src/lib/lstrlib.c:
+	.text       start:0x802CCE94 end:0x802CED58
 
 lua/src/ltable.c:
 	.text       start:0x802CED58 end:0x802CFE48
 	.data       start:0x803F2140 end:0x803F2190
 	.sdata2     start:0x804B1C00 end:0x804B1C10
+
+lua/src/lib/ltablib.c:
+	.text       start:0x802CFE48 end:0x802D08A8
+
+lua/src/ltm.c:
+	.text       start:0x802D08A8 end:0x802D0A2C
+
+lua/src/lundump.c:
+	.text       start:0x802D0A2C end:0x802D1570
+
+lua/src/lvm.c:
+	.text       start:0x802D1570 end:0x802D3DDC
+
+lua/src/lzio.c:
+	.text       start:0x802D3DDC end:0x802D3FFC
 
 PowerPC_EABI_Support/Runtime/Src/runtime.c:
 	.text       start:0x80330660 end:0x80330DF0

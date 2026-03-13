@@ -39,11 +39,11 @@ static int luaB_print (lua_State *L) {
     s = lua_tostring(L, -1);  /* get result */
     if (s == NULL)
       return luaL_error(L, "`tostring' must return a string to `print'");
-    if (i>1) fputs("\t", stdout);
-    fputs(s, stdout);
+    //if (i>1) fputs("\t", stdout);
+    //fputs(s, stdout);
     lua_pop(L, 1);  /* pop result */
   }
-  fputs("\n", stdout);
+  //fputs("\n", stdout);
   return 0;
 }
 
@@ -418,7 +418,7 @@ static const char *getpath (lua_State *L) {
   path = lua_tostring(L, -1);
   lua_pop(L, 1);
   if (path) return path;
-  path = getenv(LUA_PATH);  /* else try environment variable */
+  //path = getenv(LUA_PATH);  /* else try environment variable */
   if (path) return path;
   return LUA_PATH_DEFAULT;  /* else use default */
 }

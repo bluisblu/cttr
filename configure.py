@@ -276,6 +276,7 @@ cflags_lua = [
     "-O4,s",
     "-inline off",
     "-DLUA_NUMBER=float",
+    "-DBUFSIZ=1024",
 ]
 
 config.linker_version = "GC/2.6"
@@ -593,18 +594,31 @@ config.libs = [
         "lib": "Lua 5.0.2",
         "mw_version": "GC/2.6",
         "cflags": cflags_lua,
-        # "progress_category": "lua",  # Leave commented until split
+        "progress_category": "lua",
         "objects": [
             Object(NonMatching, "lua/src/lapi.c"),
+            Object(NonMatching, "lua/src/lib/lauxlib.c"),
+            Object(NonMatching, "lua/src/lib/lbaselib.c"),
             Object(NonMatching, "lua/src/lcode.c"),
+            Object(NonMatching, "lua/src/lib/ldblib.c"),
             Object(NonMatching, "lua/src/ldebug.c"),
             Object(NonMatching, "lua/src/ldo.c"),
             Object(Matching, "lua/src/ldump.c"),
             Object(NonMatching, "lua/src/lfunc.c"),
             Object(NonMatching, "lua/src/lgc.c"),
             Object(Matching, "lua/src/llex.c"),
+            Object(NonMatching, "lua/src/lmem.c"),
+            Object(NonMatching, "lua/src/lobject.c"),
+            Object(NonMatching, "lua/src/lparser.c"),
             Object(NonMatching, "lua/src/lstate.c"),
+            Object(Matching, "lua/src/lstring.c"),
+            Object(NonMatching, "lua/src/lib/lstrlib.c"),
             Object(NonMatching, "lua/src/ltable.c"),
+            Object(NonMatching, "lua/src/lib/ltablib.c"),
+            Object(NonMatching, "lua/src/ltm.c"),
+            Object(NonMatching, "lua/src/lundump.c"),
+            Object(NonMatching, "lua/src/lvm.c"),
+            Object(Matching, "lua/src/lzio.c"),
         ],
     },
     {
