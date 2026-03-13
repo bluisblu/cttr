@@ -486,8 +486,9 @@ static int errfile (lua_State *L, int fnameindex) {
 LUALIB_API int luaL_loadfile (lua_State *L, const char *filename) {
   LoadF lf;
   int status, readstatus;
+  /*
   int c;
-  int fnameindex = lua_gettop(L) + 1;  /* index of filename on the stack */
+  int fnameindex = lua_gettop(L) + 1;  // index of filename on the stack
   if (filename == NULL) {
     lua_pushliteral(L, "=stdin");
     lf.f = stdin;
@@ -496,21 +497,22 @@ LUALIB_API int luaL_loadfile (lua_State *L, const char *filename) {
     lua_pushfstring(L, "@%s", filename);
     lf.f = fopen(filename, "r");
   }
-  if (lf.f == NULL) return errfile(L, fnameindex);  /* unable to open file */
+  if (lf.f == NULL) return errfile(L, fnameindex);  // unable to open file
   c = ungetc(getc(lf.f), lf.f);
-  if (!(isspace(c) || isprint(c)) && lf.f != stdin) {  /* binary file? */
+  if (!(isspace(c) || isprint(c)) && lf.f != stdin) {  // binary file? 
     fclose(lf.f);
-    lf.f = fopen(filename, "rb");  /* reopen in binary mode */
-    if (lf.f == NULL) return errfile(L, fnameindex); /* unable to reopen file */
+    lf.f = fopen(filename, "rb");  // reopen in binary mode 
+    if (lf.f == NULL) return errfile(L, fnameindex); // unable to reopen file
   }
   status = lua_load(L, getF, &lf, lua_tostring(L, -1));
   readstatus = ferror(lf.f);
-  if (lf.f != stdin) fclose(lf.f);  /* close file (even in case of errors) */
+  if (lf.f != stdin) fclose(lf.f);  // close file (even in case of errors) 
   if (readstatus) {
-    lua_settop(L, fnameindex);  /* ignore results from `lua_load' */
+    lua_settop(L, fnameindex);  // ignore results from `lua_load' 
     return errfile(L, fnameindex);
   }
   lua_remove(L, fnameindex);
+  */
   return status;
 }
 
@@ -557,7 +559,7 @@ static void callalert (lua_State *L, int status) {
       lua_call(L, 1, 0);
     }
     else {  /* no _ALERT function; print it on stderr */
-      fprintf(stderr, "%s\n", lua_tostring(L, -2));
+      //fprintf(stderr, "%s\n", lua_tostring(L, -2));
       lua_pop(L, 2);  /* remove error message and _ALERT */
     }
   }

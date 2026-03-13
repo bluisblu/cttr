@@ -5,12 +5,14 @@
 extern "C" {
 #endif
 
-typedef struct FILE {
+#ifndef _MSL_COMMON_ANSI_FILES_H
+typedef struct _FILE {
     u8 dummy;
 } FILE;
 
 int fclose(FILE*);
 int fflush(FILE*);
+#endif
 
 #ifdef __cplusplus
 }

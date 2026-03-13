@@ -211,8 +211,8 @@ static int gethook (lua_State *L) {
 static int debug (lua_State *L) {
   for (;;) {
     char buffer[250];
-    fputs("lua_debug> ", stderr);
-    if (fgets(buffer, sizeof(buffer), stdin) == 0 ||
+    //fputs("lua_debug> ", stderr);
+    if (/*fgets(buffer, sizeof(buffer), stdin) == 0 ||*/
         strcmp(buffer, "cont\n") == 0)
       return 0;
     lua_dostring(L, buffer);
