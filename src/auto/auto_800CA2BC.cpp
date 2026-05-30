@@ -1,6 +1,6 @@
 #include "CTTR/Data.h"
 
-void Data::SetScriptAlias(const char *) {}
+void Data::SetScriptAlias(const char*) {}
 
 void DataBoolean::SetValue(bool value) {}
 
@@ -14,6 +14,6 @@ void DataObject::SetValue(core::IRefCount value) {}
 
 core::IRefCount DataObject::GetValue() {}
 
-void DataString::SetValue(const char *value) {}
+void DataString::SetValue(const char* value) {}
 
-const char *DataString::GetValue() {}
+const char* DataString::GetValue() {}

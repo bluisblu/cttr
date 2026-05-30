@@ -5,8 +5,8 @@ struct Script {};
 struct LoadSet {};
 
 struct ScriptPlayer {
-    void SetScript(Script *pScript);
-    void SetScriptNative(LoadSet *pScript);
+    void SetScript(Script* pScript);
+    void SetScriptNative(LoadSet* pScript);
     void PlaySync();
     void PlayAsync();
     void Stop();
@@ -18,9 +18,9 @@ struct ScriptPlayer {
     bool IsPaused();
 };
 
-void ScriptPlayer::SetScript(Script *pScript) {}
+void ScriptPlayer::SetScript(Script* pScript) {}
 
-void ScriptPlayer::SetScriptNative(LoadSet *pScript) {}
+void ScriptPlayer::SetScriptNative(LoadSet* pScript) {}
 
 void ScriptPlayer::PlaySync() {}
 

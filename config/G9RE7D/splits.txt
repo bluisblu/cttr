@@ -26,6 +26,9 @@ CTTR/Controller.cpp:
 auto/auto_8000B0BC.cpp:
 	.text       start:0x8000B0BC end:0x8000B3E4
 	.ctors      start:0x80388628 end:0x8038862C
+	.data       start:0x803958C4 end:0x803958F0
+	.bss        start:0x8040B568 end:0x8040B5B0
+	.sdata      start:0x804A3A08 end:0x804A3AA0
 
 auto/auto_8000B3E4.cpp:
 	.text       start:0x8000B3E4 end:0x8000CAF8
@@ -70,6 +73,10 @@ auto/auto_80023334.cpp:
 auto/auto_80024240.cpp:
 	.text       start:0x80024240 end:0x80024B94
 	.ctors      start:0x80388650 end:0x80388654
+	.data       start:0x80399F68 end:0x8039B0E8
+	.bss        start:0x8040DE80 end:0x8040E020
+	.sdata      start:0x804A3EC0 end:0x804A3EE8
+	.sdata2     start:0x804AF148 end:0x804AF150
 
 auto/auto_80024B94.cpp:
 	.text       start:0x80024B94 end:0x8002F92C
@@ -158,10 +165,19 @@ auto/auto_800765E4.cpp:
 auto/auto_80078488.cpp:
 	.text       start:0x80078488 end:0x80084DC8
 	.ctors      start:0x803886A8 end:0x803886AC
+	.data       start:0x803A5B1C end:0x803A7AB8
+	.bss        start:0x80415160 end:0x80416418
+	.sdata      start:0x804A4D60 end:0x804A4E70
+	.sbss       start:0x804AD790 end:0x804AD808
+	.sdata2     start:0x804AF7E8 end:0x804AF868
 
 auto/auto_80084DC8.cpp:
 	.text       start:0x80084DC8 end:0x80088948
 	.ctors      start:0x803886AC end:0x803886B0
+	.data       start:0x803A7AB8 end:0x803A8080
+	.bss        start:0x80416418 end:0x80416968
+	.sdata      start:0x804A4E70 end:0x804A4EE8
+	.sdata2     start:0x804AF868 end:0x804AF890
 
 auto/auto_80088948.cpp:
 	.text       start:0x80088948 end:0x80089B58
@@ -438,6 +454,13 @@ auto/auto_80195DD0.cpp:
 auto/auto_80196100.cpp:
 	.text       start:0x80196100 end:0x80199338
 	.ctors      start:0x803887C0 end:0x803887C4
+
+auto/auto_80199338.cpp:
+	.text       start:0x80199338 end:0x801AA510
+	.ctors      start:0x803887C4 end:0x803887C8
+	.sdata      start:0x804A8500 end:0x804A8618
+	.sbss       start:0x804AE010 end:0x804AE018
+	.sdata2     start:0x804B0BB8 end:0x804B0D40
 
 auto/auto_801AA510.cpp:
 	.text       start:0x801AA510 end:0x801AD70C
@@ -1067,6 +1090,12 @@ auto/auto_802B66E0.cpp:
 	.text       start:0x802B66E0 end:0x802B7B20
 	.ctors      start:0x80388A38 end:0x80388A3C
 
+auto/auto_802B7B20.cpp:
+	.text       start:0x802B7B20 end:0x802BBB88
+	.bss        start:0x80455190 end:0x8047D280
+	.sbss       start:0x804AE660 end:0x804AE8A8
+	.sdata2     start:0x804B1B50 end:0x804B1B68
+
 lua/src/lapi.c:
 	.text       start:0x802BBB88 end:0x802BD820
 
@@ -1144,6 +1173,12 @@ lua/src/lvm.c:
 lua/src/lzio.c:
 	.text       start:0x802D3DDC end:0x802D3FFC
 
+auto/auto_802D3FFC.cpp:
+	extab       start:0x80005600 end:0x800056B0
+	extabindex  start:0x80005740 end:0x800057E8
+	.text       start:0x802D3FFC end:0x80330660
+	.dtors      start:0x80388A48 end:0x80388A4C
+
 PowerPC_EABI_Support/Runtime/Src/runtime.c:
 	.text       start:0x80330660 end:0x80330DF0
 	.rodata     start:0x803949F8 end:0x80394A10
@@ -1154,15 +1189,65 @@ PowerPC_EABI_Support/Runtime/Src/__init_cpp_exceptions.cpp:
 	.dtors      start:0x80388A40 end:0x80388A48
 	.sdata      start:0x804AD338 end:0x804AD33C
 
+auto/auto_80330E6C.cpp:
+	extab       start:0x800056B0 end:0x80005724
+	extabindex  start:0x800057E8 end:0x8000583C
+	.text       start:0x80330E6C end:0x80332444
+
 PowerPC_EABI_Support/Runtime/Src/Gecko_ExceptionPPC.cp:
 	.text       start:0x80332444 end:0x803324AC
 	.bss        start:0x8047D280 end:0x8047D290
+
+auto/auto_803324AC.cpp:
+	.text       start:0x803324AC end:0x80332628
 
 PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/abort_exit.c:
 	.text       start:0x80332628 end:0x803327B4
 	.bss        start:0x8047D290 end:0x8047D390
 	.sbss       start:0x804AE988 end:0x804AE998
 
+auto/auto_803327B4.cpp:
+	.text       start:0x803327B4 end:0x8033C7D8
+
 PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/signal.c:
 	.text       start:0x8033C7D8 end:0x8033C898
 	.bss        start:0x8047D6C8 end:0x8047D6E0
+
+auto/auto_8033C898.cpp:
+	.text       start:0x8033C898 end:0x80344B18
+
+dolphin/os/OSContext.c:
+	.text       start:0x80344B18 end:0x803453C0
+	.data       start:0x804033F8 end:0x804035D0
+
+dolphin/os/OSError.c:
+	.text       start:0x803453C0 end:0x80345A6C
+	.data       start:0x804035D0 end:0x804038EC
+	.sdata      start:0x804AD3C0 end:0x804AD3C8
+
+dolphin/os/OSExec.c:
+	.text       start:0x80345A6C end:0x803463CC
+
+dolphin/os/OSFatal.c:
+	.text       start:0x803463CC end:0x8034705C
+
+dolphin/os/OSFont.c:
+	.text       start:0x8034705C end:0x80347BE8
+
+dolphin/os/OSInterrupt.c:
+	.text       start:0x80347BE8 end:0x803484F0
+	.data       start:0x80404410 end:0x80404440
+	.sbss       start:0x804AEA28 end:0x804AEA40
+
+dolphin/os/OSLink.c:
+	.text       start:0x803484F0 end:0x80348508
+
+dolphin/os/OSMessage.c:
+	.text       start:0x80348508 end:0x8034870C
+
+dolphin/os/OSMemory.c:
+	.text       start:0x8034870C end:0x803489FC
+	.data       start:0x80404440 end:0x80404450
+
+auto/auto_803489FC.c:
+	.text       start:0x803489FC end:0x80388608

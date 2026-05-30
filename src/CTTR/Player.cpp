@@ -24,11 +24,11 @@ bool Player::IsActive() {
     return mIsActive;
 }
 
-void Player::SetNameOfUser(const char *name) {
+void Player::SetNameOfUser(const char* name) {
     mUserName = name;
 }
 
-const char *Player::GetNameOfUser() {
+const char* Player::GetNameOfUser() {
     return mUserName;
 }
 
@@ -52,25 +52,25 @@ bool Player::IsLocal() {
     return mIsLocal;
 }
 
-void Player::SetVehicleMotifName(const char *name) {
+void Player::SetVehicleMotifName(const char* name) {
     mVehicleMotifName = name;
 }
 
-const char *Player::GetVehicleMotifName() {
+const char* Player::GetVehicleMotifName() {
     return mVehicleMotifName;
 }
 
-void Player::SetCharacterMotifName(const char *name) {
+void Player::SetCharacterMotifName(const char* name) {
     mCharacterMotifName = name;
 }
 
-const char *Player::GetCharacterMotifName() {
+const char* Player::GetCharacterMotifName() {
     return mCharacterMotifName;
 }
 
-void Player::SetController(Controller *controller) {}
+void Player::SetController(Controller* controller) {}
 
-Controller *Player::GetController() {
+Controller* Player::GetController() {
     return mController;
 }
 
@@ -97,27 +97,27 @@ void Player::fn_8018CBE0(s8 param_1) {
     }
 }
 
-void Player::SetDebugController(Controller *controller) {}
+void Player::SetDebugController(Controller* controller) {}
 
-Controller *Player::GetDebugController() {
+Controller* Player::GetDebugController() {
     return mDebugController;
 }
 
-void Player::SetView(View *pView) {
+void Player::SetView(View* pView) {
     mView = pView;
 }
 
-View *Player::GetView() {
+View* Player::GetView() {
     return mView;
 }
 
-Player *PlayerManager::GetPlayer(unsigned which) {}
+Player* PlayerManager::GetPlayer(unsigned which) {}
 unsigned PlayerManager::GetNumberOfPlayers() {}
 unsigned PlayerManager::GetNumberOfActivePlayers() {}
 unsigned PlayerManager::GetNumberOfActiveLocalPlayers() {}
-void PlayerManager::ActivateOnlinePlay(const char *ipaddress) {}
+void PlayerManager::ActivateOnlinePlay(const char* ipaddress) {}
 void PlayerManager::DeactivateOnlinePlay() {}
-const char *PlayerManager::GetUniqueName() {}
+const char* PlayerManager::GetUniqueName() {}
 uint PlayerManager::GetRangedRandom(unsigned l, unsigned h) {}
 void PlayerManager::SetPlayersReady(bool) {}
 bool PlayerManager::ArePlayersReady() {}
