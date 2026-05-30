@@ -466,25 +466,26 @@ u32 OSLoadFont(OSFontHeader* fontData, void* tmp) {
 static char* ParseStringS(u16 encode, const char* string, OSFontHeader** pfont, int* pfontCode) {
     OSFontHeader* font;
     u16 code = 0;
+    const u8* u_string = (const u8*)string;
 
     switch (encode) {
     case OS_FONT_ENCODE_ANSI:
         font = FontDataAnsi;
-        code = *string;
+        code = *u_string;
         if (code != 0) {
-            string++;
+            u_string++;
         }
         break;
     case OS_FONT_ENCODE_SJIS:
         font = FontDataSjis;
-        code = *string;
+        code = *u_string;
         if (code == 0) {
             break;
         }
-        string++;
+        u_string++;
 
-        if (IsSjisLeadByte(code) && IsSjisTrailByte(*string)) {
-            code = (code << 8 | *string++);
+        if (IsSjisLeadByte(code) && IsSjisTrailByte(*u_string)) {
+            code = (code << 8 | *u_string++);
         }
         break;
     }
@@ -492,7 +493,7 @@ static char* ParseStringS(u16 encode, const char* string, OSFontHeader** pfont, 
     *pfont = font;
     *pfontCode = GetFontCode(encode, code);
 
-    return (char*)string;
+    return (char*)u_string;
 }
 
 static char* ParseStringW(u16 encode, const char* string, OSFontHeader** pfont, int* pfontCode) {

@@ -1214,7 +1214,38 @@ PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/signal.c:
 	.bss        start:0x8047D6C8 end:0x8047D6E0
 
 auto/auto_8033C898.cpp:
-	.text       start:0x8033C898 end:0x80344B18
+	.text       start:0x8033C898 end:0x80342AEC
+
+dolphin/os/OS.c:
+	.text       start:0x80342AEC end:0x803435B8
+	.data       start:0x80402BA8 end:0x80402DA0
+	.bss        start:0x8047D720 end:0x8047D790
+	.sdata      start:0x804AD3A0 end:0x804AD3B0
+	.sbss       start:0x804AE9B8 end:0x804AE9F0
+
+dolphin/os/OSAlarm.c:
+	.text       start:0x803435B8 end:0x80343D90
+	.data       start:0x80402DA0 end:0x80402DB0
+	.sbss       start:0x804AE9F0 end:0x804AE9F8
+
+dolphin/os/OSAlloc.c:
+	.text       start:0x80343D90 end:0x80344400
+	.data       start:0x80402DB0 end:0x80403148
+	.sdata      start:0x804AD3B0 end:0x804AD3B8
+	.sbss       start:0x804AE9F8 end:0x804AEA08
+
+dolphin/os/OSArena.c:
+	.text       start:0x80344400 end:0x8034444C
+	.sdata      start:0x804AD3B8 end:0x804AD3C0
+	.sbss       start:0x804AEA08 end:0x804AEA10
+
+dolphin/os/OSAudioSystem.c:
+	.text       start:0x8034444C end:0x803446E0
+	.data       start:0x80403148 end:0x804031C8
+
+dolphin/os/OSCache.c:
+	.text       start:0x803446E0 end:0x80344B18
+	.data       start:0x804031C8 end:0x804033F8
 
 dolphin/os/OSContext.c:
 	.text       start:0x80344B18 end:0x803453C0
@@ -1227,12 +1258,22 @@ dolphin/os/OSError.c:
 
 dolphin/os/OSExec.c:
 	.text       start:0x80345A6C end:0x803463CC
+	.data       start:0x804038F0 end:0x80403900
+	.sdata      start:0x804AD3C8 end:0x804AD3D0
+	.sbss       start:0x804AEA10 end:0x804AEA18
 
 dolphin/os/OSFatal.c:
 	.text       start:0x803463CC end:0x8034705C
+	.bss        start:0x8047D7D8 end:0x8047DAB0
+	.sdata      start:0x804AD3D0 end:0x804AD3D8
+	.sdata2     start:0x804B2298 end:0x804B22D8
 
 dolphin/os/OSFont.c:
 	.text       start:0x8034705C end:0x80347BE8
+	.data       start:0x80403900 end:0x80404410
+	.sdata      start:0x804AD3D8 end:0x804AD3E0
+	.sbss       start:0x804AEA18 end:0x804AEA28
+	.sdata2     start:0x804B22D8 end:0x804B22E0
 
 dolphin/os/OSInterrupt.c:
 	.text       start:0x80347BE8 end:0x803484F0
@@ -1249,5 +1290,41 @@ dolphin/os/OSMemory.c:
 	.text       start:0x8034870C end:0x803489FC
 	.data       start:0x80404440 end:0x80404450
 
-auto/auto_803489FC.c:
-	.text       start:0x803489FC end:0x80388608
+dolphin/os/OSMutex.c:
+	.text       start:0x803489FC end:0x80348C48
+
+dolphin/os/OSReboot.c:
+	.text       start:0x80348C48 end:0x80348CCC
+	.sbss       start:0x804AEA40 end:0x804AEA48
+
+dolphin/os/OSReset.c:
+	.text       start:0x80348CCC end:0x80349150
+	.data       start:0x80404450 end:0x804044A0
+	.sbss       start:0x804AEA48 end:0x804AEA54
+
+dolphin/os/OSResetSW.c:
+	.text       start:0x80349150 end:0x80349550
+	.sbss       start:0x804AEA58 end:0x804AEA78
+
+dolphin/os/OSRtc.c:
+	.text       start:0x80349550 end:0x8034A15C
+	.bss        start:0x8047DAC0 end:0x8047DB14
+
+dolphin/os/OSSemaphore.c:
+	.text       start:0x8034A15C end:0x8034A284
+
+dolphin/os/OSSync.c:
+	.text       start:0x8034A284 end:0x8034A308
+
+dolphin/os/OSThread.c:
+	.text       start:0x8034A308 end:0x8034B7B4
+
+dolphin/os/OSTime.c:
+	.text       start:0x8034B7B4 end:0x8034BC30
+	.data       start:0x804044A0 end:0x80404500
+
+dolphin/os/__ppc_eabi_init.cpp:
+	.text       start:0x8034BC30 end:0x8034BCC4
+
+auto/auto_8034BCC4.cpp:
+	.text       start:0x8034BCC4 end:0x80388608
