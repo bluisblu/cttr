@@ -211,6 +211,7 @@ cflags_base = [
     "-multibyte",  # For Wii compilers, replace with `-enc SJIS`
     "-i include",
     "-i include/stl",
+    "-i include/stl/internal",
     f"-i build/{config.version}/include",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version}",
@@ -253,6 +254,7 @@ cflags_rel = [
 # Game-specific flags
 cflags_cttr = [
     *cflags_base,
+    "-RTTI on",
     "-lang=C++",
     "-common on",
     "-char unsigned",
@@ -279,6 +281,28 @@ cflags_lua = [
     "-DBUFSIZ=1024",
 ]
 
+cflags_libpng = [
+    *cflags_base,
+    "-lang=C",
+    "-i src/PowerPC_EABI_Support/Runtime/Inc/",
+    "-i src/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Include",
+    "-i src/libpng/",
+    "-O4,s",
+    "-inline off",
+]
+
+cflags_dolphin = [
+    *cflags_base,
+    "-lang=C",
+    "-i src/PowerPC_EABI_Support/Runtime/Inc/",
+    "-i src/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Include",
+    "-i include/dolphin",
+    "-i include/dolphin/os",
+    "-i src/dolphin/os",
+    "-i src/dolphin/dvd",
+    "-D__GEKKO__"
+]
+
 config.linker_version = "GC/2.6"
 
 
@@ -287,7 +311,7 @@ def DolphinLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
     return {
         "lib": lib_name,
         "mw_version": "GC/1.2.5n",
-        "cflags": cflags_base,
+        "cflags": cflags_dolphin,
         "progress_category": "sdk",
         "objects": objects,
     }
@@ -371,7 +395,7 @@ config.libs = [
             Object(NonMatching, "auto/auto_800A9F3C.cpp"),
             Object(NonMatching, "auto/auto_800AC8F4.cpp"),
             Object(NonMatching, "auto/auto_800AD000.cpp"),
-            Object(NonMatching, "auto/auto_800AE4E0.cpp"),
+            Object(NonMatching, "CTTR/Mode.cpp"),
             Object(NonMatching, "auto/auto_800B0748.cpp"),
             Object(NonMatching, "auto/auto_800B9498.cpp"),
             Object(NonMatching, "auto/auto_800BA7BC.cpp"),
@@ -588,6 +612,12 @@ config.libs = [
             Object(NonMatching, "auto/auto_802B4E58.cpp"),
             Object(NonMatching, "auto/auto_802B59F8.cpp"),
             Object(NonMatching, "auto/auto_802B66E0.cpp"),
+            Object(NonMatching, "auto/auto_802B7B20.cpp"),
+            Object(NonMatching, "auto/auto_802D3FFC.cpp"),
+            Object(NonMatching, "auto/auto_80330E6C.cpp"),
+            Object(NonMatching, "auto/auto_803324AC.cpp"),
+            Object(NonMatching, "auto/auto_803327B4.cpp"),
+            Object(NonMatching, "auto/auto_8033C898.cpp"),
         ],
     },
     {
@@ -621,6 +651,45 @@ config.libs = [
             Object(Matching, "lua/src/lzio.c"),
         ],
     },
+    {
+        "lib": "Libpng 1.2.8",
+        "mw_version": "GC/2.6",
+        "cflags": cflags_libpng,
+        # "progress_category": "libpng",  # Leave commented until split
+        "objects": [
+            Object(NonMatching, "libpng/png.c"),
+        ],
+    },
+    DolphinLib(
+        "os",
+        [
+            Object(NonMatching, "dolphin/os/OS.c"),
+            Object(NonMatching, "dolphin/os/OSAlarm.c"),
+            Object(NonMatching, "dolphin/os/OSAlloc.c"),
+            Object(NonMatching, "dolphin/os/OSArena.c"),
+            Object(NonMatching, "dolphin/os/OSAudioSystem.c"),
+            Object(NonMatching, "dolphin/os/OSCache.c"),
+            Object(Matching, "dolphin/os/OSContext.c"),
+            Object(NonMatching, "dolphin/os/OSError.c"),
+            Object(NonMatching, "dolphin/os/OSExec.c"),
+            Object(NonMatching, "dolphin/os/OSFatal.c"),
+            Object(NonMatching, "dolphin/os/OSFont.c"),
+            Object(Matching, "dolphin/os/OSInterrupt.c"),
+            Object(NonMatching, "dolphin/os/OSLink.c"),
+            Object(Matching, "dolphin/os/OSMemory.c"),
+            Object(Matching, "dolphin/os/OSMessage.c"),
+            Object(NonMatching, "dolphin/os/OSMutex.c"),
+            Object(NonMatching, "dolphin/os/OSReboot.c"),
+            Object(NonMatching, "dolphin/os/OSReset.c"),
+            Object(NonMatching, "dolphin/os/OSResetSW.c"),
+            Object(NonMatching, "dolphin/os/OSRtc.c"),
+            Object(NonMatching, "dolphin/os/OSThread.c"),
+            Object(NonMatching, "dolphin/os/OSTime.c"),
+            Object(NonMatching, "dolphin/os/OSSync.c"),
+            Object(NonMatching, "dolphin/os/init/__start.c"),
+            Object(NonMatching, "dolphin/os/init/__ppc_eabi_init.cpp")
+        ]
+    ),
     {
         "lib": "Runtime.PPCEABI.H",
         "mw_version": config.linker_version,

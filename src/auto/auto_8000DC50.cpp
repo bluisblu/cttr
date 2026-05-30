@@ -1,17 +1,21 @@
+#include "CTTR/Sound.h"
 #include "pure3d/PolySkin.h"
 #include "pure3d/StatePropData.h"
+#include "ravenphysics/CollisionObject.h"
 #include "types.h"
 
-namespace ravenphysics {
-struct CollisionObject {};
-} // namespace ravenphysics
+struct TurretWeaponMotif {
+    virtual ~TurretWeaponMotif() {}
+};
 
-struct Sound {};
+struct ControllableWeaponMotif : TurretWeaponMotif {
+    virtual ~ControllableWeaponMotif() {}
+};
 
 struct ExplosiveChargeMotif {
-    void SetDropBoundingBoxFromGeometry(pure3d::PolySkin *pName);
-    void SetThrowBoundingBoxFromGeometry(pure3d::PolySkin *pName);
-    void SetArtAsset(pure3d::StatePropData *pName);
+    void SetDropBoundingBoxFromGeometry(pure3d::PolySkin* pName);
+    void SetThrowBoundingBoxFromGeometry(pure3d::PolySkin* pName);
+    void SetArtAsset(pure3d::StatePropData* pName);
     void SetThrowMass(f32 mass);
     void SetDropMass(f32 mass);
     f32 GetThrowMass();
@@ -72,8 +76,8 @@ struct ExplosiveChargeMotif {
 };
 
 struct GuidedLandMissileMotif {
-    void SetArtAsset(pure3d::StatePropData *pName);
-    void SetSimState(ravenphysics::CollisionObject *pCObject, char *crap);
+    void SetArtAsset(pure3d::StatePropData* pName);
+    void SetSimState(ravenphysics::CollisionObject* pCObject, char* crap);
     void SetTimeToSlowdown(uint milliseconds);
     void SetAttackRadius(f32 radius);
     void SetBumperDistance(f32 distance);
@@ -82,7 +86,7 @@ struct GuidedLandMissileMotif {
     void SetClingTime(uint milliseconds);
     uint GetClingTime();
     void SetControlSensitivity(f32 multiplier);
-    void SetClampedOnSound(Sound *sound);
+    void SetClampedOnSound(Sound* sound);
 
     u8 unk0[0x94];               // 0x00
     f32 mAttackRadius;           // 0x94
@@ -107,26 +111,26 @@ struct HandLaunchedWeaponMotif {
 };
 
 struct LargePhysicsWeaponMotif {
-    void SetArtAsset(pure3d::StatePropData *pStatePropData);
-    void SetSimState(ravenphysics::CollisionObject *pCObject, char *crap);
+    void SetArtAsset(pure3d::StatePropData* pStatePropData);
+    void SetSimState(ravenphysics::CollisionObject* pCObject, char* crap);
 };
 
 struct LockOnMissileMotif {
-    void SetArtAsset(pure3d::StatePropData *pStatePropData);
-    void SetSimState(ravenphysics::CollisionObject *pCObject, char *crap);
+    void SetArtAsset(pure3d::StatePropData* pStatePropData);
+    void SetSimState(ravenphysics::CollisionObject* pCObject, char* crap);
 };
 
 struct StickyChargeMotif {
     void SetMoveToVehicleTime(uint milliseconds);
     uint GetMoveToVehicleTime();
     void SetStuckToVehicleMinimumTime(uint milliseconds);
-    void SetArtAsset(pure3d::StatePropData *pName);
+    void SetArtAsset(pure3d::StatePropData* pName);
     void SetOffsetFromVehicle(f32 x, f32 y, f32 z);
     void SetCountdownTime(uint milliseconds);
     void SetArtCountdownTime(uint milliseconds);
     void SetMoveToVehicleBounceHeight(f32 height);
     void SetMoveToTargetVelocity(f32 velocity);
-    void SetSimState(ravenphysics::CollisionObject *pCObject, char *crap);
+    void SetSimState(ravenphysics::CollisionObject* pCObject, char* crap);
 
     u8 unk0[0x84];                   // 0x00
     uint mMoveToVehicleTime;         // 0x84
@@ -136,8 +140,8 @@ struct StickyChargeMotif {
 struct RibbonEffectGenerator {};
 
 struct TrackingMissileMotif {
-    void SetEffectGenerator(RibbonEffectGenerator *pGenerator);
-    void SetArtAsset(pure3d::StatePropData *pName);
+    void SetEffectGenerator(RibbonEffectGenerator* pGenerator);
+    void SetArtAsset(pure3d::StatePropData* pName);
     void SetHeightOffGround(f32 height);
     void SetMoveCenterMaxVelocityX(f32 velocity);
     void SetMoveCenterMaxVelocityY(f32 velocity);
@@ -154,13 +158,13 @@ struct TrackingMissileMotif {
     void SetAttackTargetRadius(f32 radius);
     void SetAttackTargetVelocityAddition(f32 velocity);
     void SetAttackTargetTime(f32 time);
-    void SetSimState(ravenphysics::CollisionObject *pCObject, char *crap);
+    void SetSimState(ravenphysics::CollisionObject* pCObject, char* crap);
     void SetLeaderHPDamage(f32 damage);
 };
 
 struct TrackingSwarmMissileMotif {
-    void SetEffectGenerator(RibbonEffectGenerator *pGenerator);
-    void SetArtAsset(pure3d::StatePropData *pName);
+    void SetEffectGenerator(RibbonEffectGenerator* pGenerator);
+    void SetArtAsset(pure3d::StatePropData* pName);
     void SetHeightOffGround(f32 height);
     void SetMoveCenterMaxVelocityX(f32 velocity);
     void SetMoveCenterMaxVelocityY(f32 velocity);
@@ -177,12 +181,12 @@ struct TrackingSwarmMissileMotif {
     void SetAttackTargetRadius(f32 radius);
     void SetAttackTargetVelocityAddition(f32 velocity);
     void SetAttackTargetTime(f32 time);
-    void SetSimState(ravenphysics::CollisionObject *pCObject, char *crap);
+    void SetSimState(ravenphysics::CollisionObject* pCObject, char* crap);
 };
 
 struct TrackingSwarmMotif {
-    void SetArtAsset(pure3d::StatePropData *pName);
-    void SetSimState(ravenphysics::CollisionObject *pCObject, char *crap);
+    void SetArtAsset(pure3d::StatePropData* pName);
+    void SetSimState(ravenphysics::CollisionObject* pCObject, char* crap);
 };
 
 struct WeaponMotif {
@@ -193,18 +197,18 @@ struct WeaponMotif {
     void SetTopSpeedReductionTime(f32 seconds);
     void SetTopSpeedReductionPercentage(f32 speed);
     void SetSpeedReduction(f32 metersPerSec);
-    void SetShotSound(Sound *sound);
-    void SetTravelSound(Sound *sound);
-    void SetHitSound(Sound *sound);
-    void SetIdleSound(Sound *sound);
-    void SetBounceSound(Sound *sound);
+    void SetShotSound(Sound* sound);
+    void SetTravelSound(Sound* sound);
+    void SetHitSound(Sound* sound);
+    void SetIdleSound(Sound* sound);
+    void SetBounceSound(Sound* sound);
 };
 
-void ExplosiveChargeMotif::SetDropBoundingBoxFromGeometry(pure3d::PolySkin *pName) {}
+void ExplosiveChargeMotif::SetDropBoundingBoxFromGeometry(pure3d::PolySkin* pName) {}
 
-void ExplosiveChargeMotif::SetThrowBoundingBoxFromGeometry(pure3d::PolySkin *pName) {}
+void ExplosiveChargeMotif::SetThrowBoundingBoxFromGeometry(pure3d::PolySkin* pName) {}
 
-void ExplosiveChargeMotif::SetArtAsset(pure3d::StatePropData *pName) {}
+void ExplosiveChargeMotif::SetArtAsset(pure3d::StatePropData* pName) {}
 
 void ExplosiveChargeMotif::SetThrowMass(f32 mass) {
     mThrowMass = mass;
@@ -346,9 +350,9 @@ f32 ExplosiveChargeMotif::GetUnk98() {
     return unk98;
 }
 
-void GuidedLandMissileMotif::SetArtAsset(pure3d::StatePropData *pName) {}
+void GuidedLandMissileMotif::SetArtAsset(pure3d::StatePropData* pName) {}
 
-void GuidedLandMissileMotif::SetSimState(ravenphysics::CollisionObject *pCObject, char *crap) {}
+void GuidedLandMissileMotif::SetSimState(ravenphysics::CollisionObject* pCObject, char* crap) {}
 
 void GuidedLandMissileMotif::SetTimeToSlowdown(uint milliseconds) {
     mTimeToSlowdown = milliseconds;
@@ -380,7 +384,7 @@ void GuidedLandMissileMotif::SetControlSensitivity(f32 multiplier) {
     mControlSensitivity = multiplier;
 }
 
-void GuidedLandMissileMotif::SetClampedOnSound(Sound *sound) {}
+void GuidedLandMissileMotif::SetClampedOnSound(Sound* sound) {}
 
 void HandLaunchedWeaponMotif::SetForwardDefaultLaunchDirection(bool isTrue) {
     mForwardDefaultLaunchDirection = isTrue;
@@ -390,13 +394,13 @@ void HandLaunchedWeaponMotif::SetDropSpeed(f32 speed) {
     mDropSpeed = speed;
 }
 
-void LargePhysicsWeaponMotif::SetArtAsset(pure3d::StatePropData *pStatePropData) {}
+void LargePhysicsWeaponMotif::SetArtAsset(pure3d::StatePropData* pStatePropData) {}
 
-void LargePhysicsWeaponMotif::SetSimState(ravenphysics::CollisionObject *pCObject, char *crap) {}
+void LargePhysicsWeaponMotif::SetSimState(ravenphysics::CollisionObject* pCObject, char* crap) {}
 
-void LockOnMissileMotif::SetArtAsset(pure3d::StatePropData *pStatePropData) {}
+void LockOnMissileMotif::SetArtAsset(pure3d::StatePropData* pStatePropData) {}
 
-void LockOnMissileMotif::SetSimState(ravenphysics::CollisionObject *pCObject, char *crap) {}
+void LockOnMissileMotif::SetSimState(ravenphysics::CollisionObject* pCObject, char* crap) {}
 
 void StickyChargeMotif::SetMoveToVehicleTime(uint milliseconds) {
     mMoveToVehicleTime = milliseconds;
@@ -410,7 +414,7 @@ void StickyChargeMotif::SetStuckToVehicleMinimumTime(uint milliseconds) {
     mStuckToVehicleMinimumTime = milliseconds;
 }
 
-void StickyChargeMotif::SetArtAsset(pure3d::StatePropData *pName) {}
+void StickyChargeMotif::SetArtAsset(pure3d::StatePropData* pName) {}
 
 void StickyChargeMotif::SetOffsetFromVehicle(f32 x, f32 y, f32 z) {}
 
@@ -422,11 +426,11 @@ void StickyChargeMotif::SetMoveToVehicleBounceHeight(f32 height) {}
 
 void StickyChargeMotif::SetMoveToTargetVelocity(f32 velocity) {}
 
-void StickyChargeMotif::SetSimState(ravenphysics::CollisionObject *pCObject, char *crap) {}
+void StickyChargeMotif::SetSimState(ravenphysics::CollisionObject* pCObject, char* crap) {}
 
-void TrackingMissileMotif::SetEffectGenerator(RibbonEffectGenerator *pGenerator) {}
+void TrackingMissileMotif::SetEffectGenerator(RibbonEffectGenerator* pGenerator) {}
 
-void TrackingMissileMotif::SetArtAsset(pure3d::StatePropData *pName) {}
+void TrackingMissileMotif::SetArtAsset(pure3d::StatePropData* pName) {}
 
 void TrackingMissileMotif::SetHeightOffGround(f32 height) {}
 
@@ -460,13 +464,13 @@ void TrackingMissileMotif::SetAttackTargetVelocityAddition(f32 velocity) {}
 
 void TrackingMissileMotif::SetAttackTargetTime(f32 time) {}
 
-void TrackingMissileMotif::SetSimState(ravenphysics::CollisionObject *pCObject, char *crap) {}
+void TrackingMissileMotif::SetSimState(ravenphysics::CollisionObject* pCObject, char* crap) {}
 
 void TrackingMissileMotif::SetLeaderHPDamage(f32 damage) {}
 
-void TrackingSwarmMissileMotif::SetEffectGenerator(RibbonEffectGenerator *pGenerator) {}
+void TrackingSwarmMissileMotif::SetEffectGenerator(RibbonEffectGenerator* pGenerator) {}
 
-void TrackingSwarmMissileMotif::SetArtAsset(pure3d::StatePropData *pName) {}
+void TrackingSwarmMissileMotif::SetArtAsset(pure3d::StatePropData* pName) {}
 
 void TrackingSwarmMissileMotif::SetHeightOffGround(f32 height) {}
 
@@ -500,11 +504,11 @@ void TrackingSwarmMissileMotif::SetAttackTargetVelocityAddition(f32 velocity) {}
 
 void TrackingSwarmMissileMotif::SetAttackTargetTime(f32 time) {}
 
-void TrackingSwarmMissileMotif::SetSimState(ravenphysics::CollisionObject *pCObject, char *crap) {}
+void TrackingSwarmMissileMotif::SetSimState(ravenphysics::CollisionObject* pCObject, char* crap) {}
 
-void TrackingSwarmMotif::SetArtAsset(pure3d::StatePropData *pName) {}
+void TrackingSwarmMotif::SetArtAsset(pure3d::StatePropData* pName) {}
 
-void TrackingSwarmMotif::SetSimState(ravenphysics::CollisionObject *pCObject, char *crap) {}
+void TrackingSwarmMotif::SetSimState(ravenphysics::CollisionObject* pCObject, char* crap) {}
 
 void WeaponMotif::SetSpeed(f32, f32, f32) {}
 
@@ -520,12 +524,12 @@ void WeaponMotif::SetTopSpeedReductionPercentage(f32 speed) {}
 
 void WeaponMotif::SetSpeedReduction(f32 metersPerSec) {}
 
-void WeaponMotif::SetShotSound(Sound *sound) {}
+void WeaponMotif::SetShotSound(Sound* sound) {}
 
-void WeaponMotif::SetTravelSound(Sound *sound) {}
+void WeaponMotif::SetTravelSound(Sound* sound) {}
 
-void WeaponMotif::SetHitSound(Sound *sound) {}
+void WeaponMotif::SetHitSound(Sound* sound) {}
 
-void WeaponMotif::SetIdleSound(Sound *sound) {}
+void WeaponMotif::SetIdleSound(Sound* sound) {}
 
-void WeaponMotif::SetBounceSound(Sound *sound) {}
+void WeaponMotif::SetBounceSound(Sound* sound) {}

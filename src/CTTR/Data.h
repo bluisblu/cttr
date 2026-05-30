@@ -1,14 +1,11 @@
 #ifndef __DATA_H__
 #define __DATA_H__
 
+#include "core/IRefCount.h"
 #include "types.h"
 
-namespace core {
-struct IRefCount {};
-} // namespace core
-
 struct Data {
-    void SetScriptAlias(const char *);
+    void SetScriptAlias(const char*);
 };
 struct DataBoolean {
     void SetValue(bool value);
@@ -23,8 +20,8 @@ struct DataObject {
     core::IRefCount GetValue();
 };
 struct DataString {
-    void SetValue(const char *value);
-    const char *GetValue();
+    void SetValue(const char* value);
+    const char* GetValue();
 };
 
 #endif

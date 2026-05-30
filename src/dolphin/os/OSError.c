@@ -4,7 +4,7 @@
 
 #include "__os.h"
 
-OSErrorHandler __OSErrorTable[17];
+//OSErrorHandler __OSErrorTable[17];
 
 #define FPSCR_ENABLE (FPSCR_VE | FPSCR_OE | FPSCR_UE | FPSCR_ZE | FPSCR_XE)
 u32 __OSFpscrEnableBits = FPSCR_ENABLE;
