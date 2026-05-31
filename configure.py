@@ -300,6 +300,7 @@ cflags_dolphin = [
     "-i include/dolphin/os",
     "-i src/dolphin/os",
     "-i src/dolphin/dvd",
+    "-i src/dolphin/gx",
     "-D__GEKKO__",
     "-DSDK_REVISION=3",
 ]
@@ -661,6 +662,12 @@ config.libs = [
             Object(NonMatching, "libpng/png.c"),
         ],
     },
+    DolphinLib(
+        "ai",
+        [
+            Object(Matching, "dolphin/ai/ai.c"),
+        ],
+    ),
     DolphinLib(
         "os",
         [
