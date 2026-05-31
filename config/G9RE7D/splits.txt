@@ -1330,4 +1330,13 @@ dolphin/os/__ppc_eabi_init.cpp:
 	.text       start:0x8034BC30 end:0x8034BCC4
 
 auto/auto_8034BCC4.cpp:
-	.text       start:0x8034BCC4 end:0x80388608
+	.text       start:0x8034BCC4 end:0x8035474C
+
+dolphin/ai/ai.c:
+	.text       start:0x8035474C end:0x80355030
+	.data       start:0x804050C0 end:0x80405108
+	.sdata      start:0x804AD460 end:0x804AD468
+	.sbss       start:0x804AEBF8 end:0x804AEC38
+
+auto/auto_80355030.cpp:
+	.text       start:0x80355030 end:0x80388608
