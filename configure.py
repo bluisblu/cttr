@@ -685,10 +685,10 @@ config.libs = [
             Object(Matching, "dolphin/os/OSResetSW.c"),
             Object(Matching, "dolphin/os/OSRtc.c"),
             Object(Matching, "dolphin/os/OSSemaphore.c"),
-            Object(NonMatching, "dolphin/os/OSThread.c"),
-            Object(NonMatching, "dolphin/os/OSTime.c"),
+            Object(Matching, "dolphin/os/OSThread.c"),
+            Object(Matching, "dolphin/os/OSTime.c"),
             Object(Matching, "dolphin/os/OSSync.c"),
-            Object(NonMatching, "dolphin/os/init/__start.c"),
+            Object(NonMatching, "dolphin/os/__start.c"),
             Object(NonMatching, "dolphin/os/__ppc_eabi_init.cpp")
         ]
     ),

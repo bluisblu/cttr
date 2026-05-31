@@ -1318,6 +1318,9 @@ dolphin/os/OSSync.c:
 
 dolphin/os/OSThread.c:
 	.text       start:0x8034A308 end:0x8034B7B4
+	.bss        start:0x8047DB18 end:0x8047E510
+	.sdata      start:0x804AD3E0 end:0x804AD3E8
+	.sbss       start:0x804AEA78 end:0x804AEA90
 
 dolphin/os/OSTime.c:
 	.text       start:0x8034B7B4 end:0x8034BC30
