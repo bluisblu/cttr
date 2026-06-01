@@ -1329,8 +1329,78 @@ dolphin/os/OSTime.c:
 dolphin/os/__ppc_eabi_init.cpp:
 	.text       start:0x8034BC30 end:0x8034BCC4
 
-auto/auto_8034BCC4.cpp:
-	.text       start:0x8034BCC4 end:0x8035474C
+dolphin/mtx/mtx.c:
+	.text       start:0x8034BCC4 end:0x8034BE18
+	.sdata      start:0x804AD3E8 end:0x804AD3F0
+	.sdata2     start:0x804B22E0 end:0x804B22E8
+
+dolphin/mtx/mtx44.c:
+	.text       start:0x8034BE18 end:0x8034BF4C
+	.sdata2     start:0x804B22E8 end:0x804B22F8
+
+dolphin/dvd/dvdlow.c:
+	.text       start:0x8034BF4C end:0x8034CDC8
+	.bss        start:0x8047E510 end:0x8047E5E0
+	.sdata      start:0x804AD3F0 end:0x804AD3F8
+	.sbss       start:0x804AEA90 end:0x804AEAD8
+
+dolphin/dvd/dvdfs.c:
+	.text       start:0x8034CDC8 end:0x8034D970
+	.data       start:0x80404500 end:0x80404690
+	.sdata      start:0x804AD3F8 end:0x804AD400
+	.sbss       start:0x804AEAD8 end:0x804AEAF8
+
+dolphin/dvd/dvd.c:
+	.text       start:0x8034D970 end:0x803501C4
+	.data       start:0x80404690 end:0x80404818
+	.bss        start:0x8047E5E0 end:0x8047E678
+	.sdata      start:0x804AD400 end:0x804AD418
+	.sbss       start:0x804AEAF8 end:0x804AEB48
+
+dolphin/dvd/dvdqueue.c:
+	.text       start:0x803501C4 end:0x803503BC
+	.bss        start:0x8047E678 end:0x8047E698
+
+dolphin/dvd/dvderror.c:
+	.text       start:0x803503BC end:0x80350554
+	.data       start:0x80404818 end:0x80404860
+
+dolphin/dvd/dvdidutils.c:
+	.text       start:0x80350554 end:0x8035064C
+
+dolphin/dvd/dvdFatal.c:
+	.text       start:0x8035064C end:0x80350778
+	.rodata     start:0x803953C0 end:0x803953D8
+	.data       start:0x80404860 end:0x80404C10
+	.sdata      start:0x804AD418 end:0x804AD420
+	.sbss       start:0x804AEB48 end:0x804AEB50
+	.sdata2     start:0x804B22F8 end:0x804B2300
+
+dolphin/dvd/fstload.c:
+	.text       start:0x80350778 end:0x803509B8
+	.data       start:0x80404C10 end:0x80404C80
+	.bss        start:0x8047E698 end:0x8047E708
+	.sdata      start:0x804AD420 end:0x804AD430
+	.sbss       start:0x804AEB50 end:0x804AEB60
+
+dolphin/vi/vi.c:
+	.text       start:0x803509B8 end:0x80352B50
+	.data       start:0x80404C80 end:0x80405068
+	.bss        start:0x8047E708 end:0x8047E850
+	.sdata      start:0x804AD430 end:0x804AD440
+	.sbss       start:0x804AEB60 end:0x804AEBC8
+
+dolphin/pad/Padclamp.c:
+	.text       start:0x80352B50 end:0x80352E04
+	.rodata     start:0x803953D8 end:0x803953E2
+	.sdata2     start:0x804B2300 end:0x804B2320
+
+dolphin/pad/Pad.c:
+	.text       start:0x80352E04 end:0x8035474C
+	.data       start:0x80405068 end:0x804050C0
+	.bss        start:0x8047E850 end:0x8047E8A0
+	.sdata      start:0x804AD440 end:0x804AD460
+	.sbss       start:0x804AEBC8 end:0x804AEBF8
 
 dolphin/ai/ai.c:
 	.text       start:0x8035474C end:0x80355030
