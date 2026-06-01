@@ -299,6 +299,7 @@ cflags_dolphin = [
     "-i include/dolphin",
     "-i include/dolphin/os",
     "-i src/dolphin",
+    "-i src/dolphin/card",
     "-i src/dolphin/dvd",
     "-i src/dolphin/gx",
     "-i src/dolphin/os",
@@ -670,6 +671,27 @@ config.libs = [
         [
             Object(Matching, "dolphin/ai/ai.c"),
         ],
+    ),
+    DolphinLib(
+        "card",
+        [
+            Object(Matching, "dolphin/card/CARDBios.c"),
+            Object(Matching, "dolphin/card/CARDUnlock.c"),
+            Object(Matching, "dolphin/card/CARDRdwr.c"),
+            Object(Matching, "dolphin/card/CARDBlock.c"),
+            Object(Matching, "dolphin/card/CARDDir.c"),
+            Object(Matching, "dolphin/card/CARDCheck.c"),
+            Object(Matching, "dolphin/card/CARDMount.c"),
+            Object(Matching, "dolphin/card/CARDFormat.c"),
+            Object(Matching, "dolphin/card/CARDOpen.c"),
+            Object(Matching, "dolphin/card/CARDCreate.c"),
+            Object(Matching, "dolphin/card/CARDRead.c"),
+            Object(Matching, "dolphin/card/CARDWrite.c"),
+            Object(Matching, "dolphin/card/CARDDelete.c"),
+            Object(Matching, "dolphin/card/CARDStat.c"),
+            Object(Matching, "dolphin/card/CARDRename.c"),
+            Object(Matching, "dolphin/card/CARDNet.c"),
+        ]
     ),
     DolphinLib(
         "dvd",
