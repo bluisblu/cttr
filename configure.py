@@ -298,9 +298,12 @@ cflags_dolphin = [
     "-i src/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Include",
     "-i include/dolphin",
     "-i include/dolphin/os",
-    "-i src/dolphin/os",
+    "-i src/dolphin",
     "-i src/dolphin/dvd",
     "-i src/dolphin/gx",
+    "-i src/dolphin/os",
+    "-i src/dolphin/si",
+    "-i src/dolphin/vi",
     "-D__GEKKO__",
     "-DSDK_REVISION=3",
 ]
@@ -669,6 +672,26 @@ config.libs = [
         ],
     ),
     DolphinLib(
+        "dvd",
+        [
+            Object(Matching, "dolphin/dvd/dvdlow.c"),
+            Object(Matching, "dolphin/dvd/dvdfs.c"),
+            Object(Matching, "dolphin/dvd/dvd.c"),
+            Object(Matching, "dolphin/dvd/dvdqueue.c"),
+            Object(Matching, "dolphin/dvd/dvderror.c"),
+            Object(Matching, "dolphin/dvd/dvdidutils.c"),
+            Object(Matching, "dolphin/dvd/dvdFatal.c"),
+            Object(Matching, "dolphin/dvd/fstload.c"),
+        ],
+    ),
+    DolphinLib(
+        "mtx",
+        [
+            Object(Matching, "dolphin/mtx/mtx.c"),
+            Object(Matching, "dolphin/mtx/mtx44.c"),
+        ]
+    ),
+    DolphinLib(
         "os",
         [
             Object(Matching, "dolphin/os/OS.c"),
@@ -698,6 +721,19 @@ config.libs = [
             Object(NonMatching, "dolphin/os/__start.c"),
             Object(NonMatching, "dolphin/os/__ppc_eabi_init.cpp")
         ]
+    ),
+    DolphinLib(
+        "pad",
+        [
+            Object(NonMatching, "dolphin/pad/Padclamp.c"),
+            Object(Matching, "dolphin/pad/Pad.c")
+        ]
+    ),
+    DolphinLib(
+        "vi",
+        [
+            Object(Matching, "dolphin/vi/vi.c", extra_cflags=["-DMATCHING"]),
+        ],
     ),
     {
         "lib": "Runtime.PPCEABI.H",
