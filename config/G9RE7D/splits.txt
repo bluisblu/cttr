@@ -1467,5 +1467,66 @@ dolphin/card/CARDNet.c:
 	.text       start:0x80363B1C end:0x80363BE0
 	.sdata      start:0x804AD4A8 end:0x804AD4B0
 
-auto/auto_80363BE0.cpp:
-	.text       start:0x80363BE0 end:0x80388608
+dolphin/gx/GXInit.c:
+	.text       start:0x80363BE0 end:0x80364F6C
+	.data       start:0x80409BA0 end:0x80409DE0
+	.bss        start:0x804999C0 end:0x80499FF0
+	.sdata      start:0x804AD4B0 end:0x804AD4B8
+	.sbss       start:0x804AED90 end:0x804AEDB8
+	.sdata2     start:0x804B2360 end:0x804B2388
+
+dolphin/gx/GXFifo.c:
+	.text       start:0x80364F6C end:0x80365974
+
+dolphin/gx/GXAttr.c:
+	.text       start:0x80365974 end:0x8036666C
+	.data       start:0x80409DE0 end:0x80409F40
+	.sdata      start:0x804AD4B8 end:0x804AD4C8
+
+dolphin/gx/GXMisc.c:
+	.text       start:0x8036666C end:0x80366F10
+	.sbss       start:0x804AEDD8 end:0x804AEDF0
+
+dolphin/gx/GXGeometry.c:
+	.text       start:0x80366F10 end:0x80367230
+
+dolphin/gx/GXFrameBuf.c:
+	.text       start:0x80367230 end:0x80367BC8
+	.data       start:0x80409F40 end:0x8040A030
+	.sdata2     start:0x804B2388 end:0x804B2390
+
+dolphin/gx/GXLight.c:
+	.text       start:0x80367BC8 end:0x80368038
+
+dolphin/gx/GXTexture.c:
+	.text       start:0x80368038 end:0x80369058
+	.data       start:0x8040A030 end:0x8040A258
+	.sdata      start:0x804AD4C8 end:0x804AD508
+	.sdata2     start:0x804B23B0 end:0x804B23D8
+
+dolphin/gx/GXBump.c:
+	.text       start:0x80369058 end:0x80369530
+	.sdata2     start:0x804B23D8 end:0x804B23E0
+
+dolphin/gx/GXTev.c:
+	.text       start:0x80369530 end:0x80369B8C
+	.data       start:0x8040A258 end:0x8040A2D0
+
+dolphin/gx/GXPixel.c:
+	.text       start:0x80369B8C end:0x8036A1C4
+	.data       start:0x8040A2D0 end:0x8040A2F0
+	.sdata2     start:0x804B23E0 end:0x804B2418
+
+dolphin/gx/GXDisplayList.c:
+	.text       start:0x8036A1C4 end:0x8036A234
+
+dolphin/gx/GXTransform.c:
+	.text       start:0x8036A234 end:0x8036A7C8
+	.sdata2     start:0x804B2418 end:0x804B2424
+
+dolphin/gx/GXPerf.c:
+	.text       start:0x8036A7C8 end:0x8036B020
+	.data       start:0x8040A2F0 end:0x8040A3E0
+
+auto/auto_8036B020.cpp:
+	.text       start:0x8036B020 end:0x80388608
