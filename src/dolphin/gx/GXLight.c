@@ -1,6 +1,6 @@
-#include <math.h>
 #include <dolphin/gx.h>
 #include <dolphin/os.h>
+#include <dolphin/sdk_math.h>
 
 #include "__gx.h"
 
@@ -243,6 +243,34 @@ void GXInitSpecularDir(GXLightObj* lt_obj, f32 nx, f32 ny, f32 nz) {
         mag = 1.0f / sqrtf(mag);
     }
     
+    obj->ldir[0] = vx * mag;
+    obj->ldir[1] = vy * mag;
+    obj->ldir[2] = vz * mag;
+    obj->lpos[0] = nx * -1000000000000000000.0f;
+    obj->lpos[1] = ny * -1000000000000000000.0f;
+    obj->lpos[2] = nz * -1000000000000000000.0f;
+}
+
+// CTTR: unknown function, most similar to GXInitSpecularDir
+void fn_80367C10(GXLightObj* lt_obj, f32 nx, f32 ny, f32 nz) {
+    f32 mag;
+    f32 vx;
+    f32 vy;
+    f32 vz;
+    __GXLightObjInt_struct* obj;
+
+    obj = (__GXLightObjInt_struct*)lt_obj;
+
+    vx = -nx;
+    vy = -ny;
+    vz = -nz + 1.0f;
+
+    mag = (vx * vx) + (vy * vy) + (vz * vz);
+    if (mag != 0.0f) {
+        
+        mag = 1.0f / sqrtf(mag);
+    }
+
     obj->ldir[0] = vx * mag;
     obj->ldir[1] = vy * mag;
     obj->ldir[2] = vz * mag;
