@@ -1408,8 +1408,84 @@ dolphin/ai/ai.c:
 	.sdata      start:0x804AD460 end:0x804AD468
 	.sbss       start:0x804AEBF8 end:0x804AEC38
 
-auto/auto_80355030.cpp:
-	.text       start:0x80355030 end:0x8035CB48
+dolphin/ar/ar.c:
+	.text       start:0x80355030 end:0x80356B08
+	.data       start:0x80405108 end:0x80405150
+	.sdata      start:0x804AD468 end:0x804AD470
+	.sbss       start:0x804AEC38 end:0x804AEC58
+
+dolphin/ar/arq.c:
+	.text       start:0x80356B08 end:0x80356EC4
+	.data       start:0x80405150 end:0x80405198
+	.sdata      start:0x804AD470 end:0x804AD478
+	.sbss       start:0x804AEC58 end:0x804AEC80
+
+dolphin/ax/AX.c:
+	.text       start:0x80356EC4 end:0x80356F68
+	.data       start:0x80405198 end:0x804051E0
+	.sdata      start:0x804AD478 end:0x804AD480
+
+dolphin/ax/AXAlloc.c:
+	.text       start:0x80356F68 end:0x80357430
+	.bss        start:0x8047E8A0 end:0x8047E9A0
+	.sbss       start:0x804AEC80 end:0x804AEC88
+
+dolphin/ax/AXAux.c:
+	.text       start:0x80357430 end:0x803578D0
+	.bss        start:0x8047E9A0 end:0x804816A0
+	.sbss       start:0x804AEC88 end:0x804AECC0
+
+dolphin/ax/AXCL.c:
+	.text       start:0x803578D0 end:0x80358000
+	.bss        start:0x804816A0 end:0x80481CA0
+	.sbss       start:0x804AECC0 end:0x804AECD8
+
+dolphin/ax/AXOut.c:
+	.text       start:0x80358000 end:0x8035880C
+	.bss        start:0x80481CA0 end:0x80486728
+	.sbss       start:0x804AECD8 end:0x804AED10
+
+dolphin/ax/AXSPB.c:
+	.text       start:0x8035880C end:0x80358CD4
+	.bss        start:0x80486740 end:0x80486778
+	.sbss       start:0x804AED10 end:0x804AED38
+
+dolphin/ax/AXVPB.c:
+	.text       start:0x80358CD4 end:0x8035A0A4
+	.data       start:0x804051E0 end:0x804052C0
+	.bss        start:0x80486780 end:0x80497F80
+	.sbss       start:0x804AED38 end:0x804AED48
+	.sdata2     start:0x804B2320 end:0x804B2328
+
+dolphin/ax/AXProf.c:
+	.text       start:0x8035A0A4 end:0x8035A0EC
+	.sbss       start:0x804AED48 end:0x804AED58
+
+dolphin/axfx/reverb_hi_4ch.c:
+	.text       start:0x8035A0EC end:0x8035AD54
+
+auto/auto_8035AD54.cpp:
+	.text       start:0x8035AD54 end:0x8035ADE0
+
+dolphin/mix/mix.c:
+	.text       start:0x8035ADE0 end:0x8035BFE4
+	.data       start:0x80408C10 end:0x804097D0
+	.bss        start:0x80497F80 end:0x80499780
+	.sbss       start:0x804AED58 end:0x804AED68
+
+dolphin/dsp/dsp.c:
+	.text       start:0x8035BFE4 end:0x8035C274
+	.data       start:0x804097D0 end:0x80409850
+	.sdata      start:0x804AD490 end:0x804AD498
+	.sbss       start:0x804AED68 end:0x804AED70
+
+dolphin/dsp/dsp_debug.c:
+	.text       start:0x8035C274 end:0x8035C2C4
+
+dolphin/dsp/dsp_task.c:
+	.text       start:0x8035C2C4 end:0x8035CB48
+	.data       start:0x80409850 end:0x80409990
+	.sbss       start:0x804AED70 end:0x804AED88
 
 dolphin/card/CARDBios.c:
 	.text       start:0x8035CB48 end:0x8035E03C
