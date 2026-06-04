@@ -299,8 +299,12 @@ cflags_dolphin = [
     "-i include/dolphin",
     "-i include/dolphin/os",
     "-i src/dolphin",
+    "-i src/dolphin/ar",
+    "-i src/dolphin/ax",
+    "-i src/dolphin/axfx",
     "-i src/dolphin/card",
     "-i src/dolphin/dvd",
+    "-i src/dolphin/dsp",
     "-i src/dolphin/gx",
     "-i src/dolphin/os",
     "-i src/dolphin/si",
@@ -673,6 +677,35 @@ config.libs = [
         ],
     ),
     DolphinLib(
+        "ar",
+        [
+            Object(Matching, "dolphin/ar/ar.c"),
+            Object(Matching, "dolphin/ar/arq.c")
+        ]
+    ),
+    DolphinLib(
+        "ax",
+        [
+            Object(Matching, "dolphin/ax/AX.c"),
+            Object(Matching, "dolphin/ax/AXAlloc.c"),
+            Object(Matching, "dolphin/ax/AXAux.c"),
+            Object(Matching, "dolphin/ax/AXCL.c"),
+            Object(Matching, "dolphin/ax/AXOut.c"),
+            Object(Matching, "dolphin/ax/AXSPB.c"),
+            Object(NonMatching, "dolphin/ax/AXVPB.c"),
+            Object(NonMatching, "dolphin/ax/AXComp.c"),
+            Object(NonMatching, "dolphin/ax/DSPCode.c"),
+            Object(Matching, "dolphin/ax/AXProf.c"),
+        ],
+    ),
+    DolphinLib(
+        "axfx",
+        [
+            Object(NonMatching, "dolphin/axfx/reverb_hi_4ch.c"),
+            Object(NonMatching, "dolphin/axfx/reverb_hi.c"),
+        ],
+    ),
+    DolphinLib(
         "card",
         [
             Object(Matching, "dolphin/card/CARDBios.c"),
@@ -707,6 +740,14 @@ config.libs = [
         ],
     ),
     DolphinLib(
+        "dsp",
+        [
+            Object(Matching, "dolphin/dsp/dsp.c"),
+            Object(Matching, "dolphin/dsp/dsp_debug.c"),
+            Object(Matching, "dolphin/dsp/dsp_task.c"),
+        ],
+    ),
+    DolphinLib(
         "gx",
         [
             Object(Matching, "dolphin/gx/GXInit.c"),
@@ -724,6 +765,12 @@ config.libs = [
             Object(NonMatching, "dolphin/gx/GXTransform.c"),
             Object(Matching, "dolphin/gx/GXPerf.c")
         ]
+    ),
+    DolphinLib(
+        "mix",
+        [
+            Object(Matching, "dolphin/mix/mix.c"),
+        ],
     ),
     DolphinLib(
         "mtx",
