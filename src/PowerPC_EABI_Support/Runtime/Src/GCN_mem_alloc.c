@@ -6,29 +6,37 @@
 #include <dolphin/os.h>
 
 inline static void InitDefaultHeap(void) {
-	void* arenaLo;
-	void* arenaHi;
+  void *arenaLo;
+  void *arenaHi;
 
-	OSReport("GCN_Mem_Alloc.c : InitDefaultHeap. No Heap Available\n");
-	OSReport("Metrowerks CW runtime library initializing default heap\n");
+  OSReport("GCN_Mem_Alloc.c : InitDefaultHeap. No Heap Available\n");
+  OSReport("Metrowerks CW runtime library initializing default heap\n");
 
-	arenaLo = OSGetArenaLo();
-	arenaHi = OSGetArenaHi();
+  arenaLo = OSGetArenaLo();
+  arenaHi = OSGetArenaHi();
 
-	arenaLo = OSInitAlloc(arenaLo, arenaHi, 1);
-	OSSetArenaLo(arenaLo);
+  arenaLo = OSInitAlloc(arenaLo, arenaHi, 1);
+  OSSetArenaLo(arenaLo);
 
-	arenaLo = (void*)OSRoundUp32B(arenaLo);
-	arenaHi = (void*)OSRoundDown32B(arenaHi);
+  arenaLo = (void *)OSRoundUp32B(arenaLo);
+  arenaHi = (void *)OSRoundDown32B(arenaHi);
 
-	OSSetCurrentHeap(OSCreateHeap(arenaLo, arenaHi));
-	OSSetArenaLo(arenaLo = arenaHi);
+  OSSetCurrentHeap(OSCreateHeap(arenaLo, arenaHi));
+  OSSetArenaLo(arenaLo = arenaHi);
 }
 
-void __sys_free(void* p) {
-    if (__OSCurrHeap == -1) {
-        InitDefaultHeap();
-    }
+void __sys_free(void *p) {
+  if (__OSCurrHeap == -1) {
+    InitDefaultHeap();
+  }
 
-    OSFreeToHeap(__OSCurrHeap, p);
+  OSFreeToHeap(__OSCurrHeap, p);
+}
+
+void __sys_alloc(u32 size) {
+  if (__OSCurrHeap == -1) {
+    InitDefaultHeap();
+  }
+
+  OSAllocFromHeap(__OSCurrHeap, size);
 }

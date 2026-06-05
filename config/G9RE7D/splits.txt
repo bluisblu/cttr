@@ -1098,18 +1098,30 @@ auto/auto_802B7B20.cpp:
 
 lua/src/lapi.c:
 	.text       start:0x802BBB88 end:0x802BD820
+	.data       start:0x803F1208 end:0x803F1218
+	.sdata      start:0x804ACB88 end:0x804ACB98
+	.sdata2     start:0x804B1B68 end:0x804B1B70
 
 lua/src/lib/lauxlib.c:
 	.text       start:0x802BD820 end:0x802BEB78
+	.data       start:0x803F1218 end:0x803F12A8
+	.sdata      start:0x804ACB98 end:0x804ACBCC
+	.sdata2     start:0x804B1B70 end:0x804B1B80
 
 lua/src/lib/lbaselib.c:
 	.text       start:0x802BEB78 end:0x802C0658
 
 lua/src/lcode.c:
 	.text       start:0x802C0658 end:0x802C2128
+	.rodata     start:0x8038EB68 end:0x8038EB80
+	.data       start:0x803F1658 end:0x803F16F8
 
 lua/src/lib/ldblib.c:
 	.text       start:0x802C2128 end:0x802C2DB4
+	.rodata     start:0x8038EB80 end:0x8038EBE8
+	.data       start:0x803F16F8 end:0x803F1828
+	.sdata      start:0x804ACD00 end:0x804ACDA8
+	.sdata2     start:0x804B1BA8 end:0x804B1BB8
 
 lua/src/ldebug.c:
 	.text       start:0x802C2DB4 end:0x802C420C
@@ -1152,6 +1164,10 @@ lua/src/lstring.c:
 
 lua/src/lib/lstrlib.c:
 	.text       start:0x802CCE94 end:0x802CED58
+	.rodata     start:0x8038EDB0 end:0x8038EE18
+	.data       start:0x803F1E50 end:0x803F2140
+	.sdata      start:0x804ACEE8 end:0x804ACF58
+	.sdata2     start:0x804B1BE0 end:0x804B1C00
 
 lua/src/ltable.c:
 	.text       start:0x802CED58 end:0x802CFE48
@@ -1160,6 +1176,10 @@ lua/src/ltable.c:
 
 lua/src/lib/ltablib.c:
 	.text       start:0x802CFE48 end:0x802D08A8
+	.rodata     start:0x8038EE18 end:0x8038EE60
+	.data       start:0x803F2190 end:0x803F21E0
+	.sdata      start:0x804ACF58 end:0x804ACFA0
+	.sdata2     start:0x804B1C10 end:0x804B1C20
 
 lua/src/ltm.c:
 	.text       start:0x802D08A8 end:0x802D0A2C
@@ -1195,11 +1215,12 @@ auto/auto_80330E6C.cpp:
 	.text       start:0x80330E6C end:0x80332444
 
 PowerPC_EABI_Support/Runtime/Src/Gecko_ExceptionPPC.cp:
-	.text       start:0x80332444 end:0x803324AC
+	.text       start:0x80332444 end:0x803324B8
 	.bss        start:0x8047D280 end:0x8047D290
 
-auto/auto_803324AC.cpp:
-	.text       start:0x803324AC end:0x80332628
+PowerPC_EABI_Support/Runtime/Src/GCN_mem_alloc.c:
+	.text       start:0x803324B8 end:0x80332628
+	.rodata     start:0x80394AA8 end:0x80394B20
 
 PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/abort_exit.c:
 	.text       start:0x80332628 end:0x803327B4
