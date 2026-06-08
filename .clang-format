@@ -6,4 +6,5 @@ UseTab: Never
 ColumnLimit: 100
 IndentCaseLabels: false
 AllowShortFunctionsOnASingleLine: Inline
+AllowShortEnumsOnASingleLine: false
 PointerAlignment: Left

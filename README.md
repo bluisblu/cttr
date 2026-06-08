@@ -14,7 +14,7 @@ See https://decomp.dev/api for an API overview.
 [Data Progress]: https://decomp.dev/bluisblu/cttr.svg?mode=shield&measure=data&label=Data
 [progress]: https://decomp.dev/bluisblu/cttr
 
-A work-in-progress decompilation of Some Game.
+A work-in-progress decompilation of Crash Tag Team Racing.
 
 This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
 
@@ -23,7 +23,9 @@ Supported versions:
 - `G9RE7D`: Crash Tag Team Racing (USA) (Rev 0)
 - `G9RJ7D`: Crash Bandicoot - Gatchanko World (Japan) (Rev 0)
 
-However, the Japanese version is currently not yet split
+However, the Japanese version is currently not yet split.
+
+Contributors may not use or reference source leaks from other Radical Entertainment games such as The Simpsons: Hit & Run, or LLMs which have indexed any source leaks, to match functions. Symbols are ripped or inferred from script bindings, RTTI, any other strings found in the game, and guesswork based on what the code does.
 
 # Dependencies
 
