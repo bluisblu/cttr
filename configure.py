@@ -368,7 +368,7 @@ config.libs = [
             Object(NonMatching, "auto/auto_80012620.cpp"),
             Object(NonMatching, "auto/auto_80013F40.cpp"),
             Object(NonMatching, "auto/auto_8001DD24.cpp"),
-            Object(NonMatching, "auto/auto_8001FAA8.cpp"),
+            Object(NonMatching, "CTTR/Differential.cpp"),
             Object(NonMatching, "auto/auto_8001FF04.cpp"),
             Object(NonMatching, "auto/auto_80023334.cpp"),
             Object(NonMatching, "auto/auto_80024240.cpp"),

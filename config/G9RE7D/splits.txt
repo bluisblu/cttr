@@ -58,9 +58,12 @@ auto/auto_8001DD24.cpp:
 	.text       start:0x8001DD24 end:0x8001FAA8
 	.ctors      start:0x80388640 end:0x80388644
 
-auto/auto_8001FAA8.cpp:
+CTTR/Differential.cpp:
 	.text       start:0x8001FAA8 end:0x8001FF04
 	.ctors      start:0x80388644 end:0x80388648
+	.bss        start:0x8040DD30 end:0x8040DE40
+	.sdata      start:0x804A3DE8 end:0x804A3E18
+	.sdata2     start:0x804AF130 end:0x804AF138
 
 auto/auto_8001FF04.cpp:
 	.text       start:0x8001FF04 end:0x80023334
