@@ -116,20 +116,25 @@ enum PresentationLanguage {
 };
 
 enum GameCollisionType {
+    GameCollisionType_Unknown00000001 = 1,
     GameCollisionType_Ground = 2,
     GameCollisionType_CarChassis = 4,
     GameCollisionType_CarUndercarriage = 8,
     GameCollisionType_WeaponAndPowerUp = 0x10,
     GameCollisionType_WeaponAndPowerUpContainer = 0x20,
     GameCollisionType_Fence = 0x40,
-    GameCollisionType_Edge = 0x200,
     GameCollisionType_SpeedBoost = 0x80,
+    GameCollisionType_Unknown00000100 = 0x100,
+    GameCollisionType_Edge = 0x200,
     GameCollisionType_Warp = 0x400,
     GameCollisionType_StateProp = 0x800,
+    GameCollisionType_Unknown00001000 = 0x1000,
     GameCollisionType_StickyCharge = 0x2000,
     GameCollisionType_GuidedLandMissile = 0x4000,
     GameCollisionType_ResetVolume = 0x8000,
     GameCollisionType_TrackingMissile = 0x10000,
+    GameCollisionType_Unknown00020000 = 0x20000,
+    GameCollisionType_Unknown00040000 = 0x40000,
     GameCollisionType_BowlingBallAmmo = 0x80000,
     GameCollisionType_Ammo = 0x100000,
 };
