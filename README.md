@@ -25,7 +25,7 @@ Supported versions:
 
 However, the Japanese version is currently not yet split.
 
-Contributors may not use or reference source leaks from other Radical Entertainment games such as The Simpsons: Hit & Run, or LLMs which have indexed any source leaks, to match functions. Symbols are ripped or inferred from script bindings, RTTI, any other strings found in the game, and guesswork based on what the code does.
+Contributors may not use or reference source leaks from other Radical Entertainment games such as The Simpsons: Hit & Run. This also extends to use of AI/LLMs, as they may have information from those leaks in their training.
 
 # Dependencies
 
