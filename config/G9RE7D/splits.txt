@@ -302,7 +302,7 @@ auto/auto_8012E678.cpp:
 	.text       start:0x8012E678 end:0x8012F770
 	.ctors      start:0x80388724 end:0x80388728
 
-auto/auto_8012F770.cpp:
+CTTR/BrakeMotif.cpp:
 	.text       start:0x8012F770 end:0x8012F930
 	.ctors      start:0x80388728 end:0x8038872C
 
@@ -386,7 +386,7 @@ auto/auto_80174DEC.cpp:
 	.text       start:0x80174DEC end:0x801779E4
 	.ctors      start:0x80388778 end:0x8038877C
 
-auto/auto_801779E4.cpp:
+CTTR/Wheel.cpp:
 	.text       start:0x801779E4 end:0x80179F5C
 	.ctors      start:0x8038877C end:0x80388780
 
@@ -1238,7 +1238,15 @@ PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/signal.c:
 	.bss        start:0x8047D6C8 end:0x8047D6E0
 
 auto/auto_8033C898.cpp:
-	.text       start:0x8033C898 end:0x80342AEC
+	.text       start:0x8033C898 end:0x803428E0
+
+dolphin/base/PPCArch.c:
+	.text       start:0x803428E0 end:0x80342A00
+
+dolphin/db/db.c:
+	.text       start:0x80342A00 end:0x80342AEC
+	.data       start:0x80402B90 end:0x80402BA8
+	.sbss       start:0x804AE9B0 end:0x804AE9B8
 
 dolphin/os/OS.c:
 	.text       start:0x80342AEC end:0x803435B8
