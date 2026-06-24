@@ -1,20 +1,9 @@
-#include "CTTR/GameObject.h"
-#include "core/IRefCount.h"
+#include "CTTR/DrivelineComponent.h"
 #include "types.h"
-
-struct DrivelineComponentMotif : GameObject {
-    DrivelineComponentMotif() {}
-    ~DrivelineComponentMotif() {}
-};
 
 struct DifferentialMotif : DrivelineComponentMotif {
     DifferentialMotif() {}
     ~DifferentialMotif() {}
-};
-
-struct DrivelineComponent {
-    DrivelineComponent() {}
-    virtual ~DrivelineComponent() {}
 };
 
 struct Differential : DrivelineComponent {
