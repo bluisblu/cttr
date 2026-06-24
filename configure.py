@@ -425,7 +425,7 @@ config.libs = [
             Object(NonMatching, "auto/auto_80128B50.cpp"),
             Object(NonMatching, "auto/auto_8012D4E8.cpp"),
             Object(NonMatching, "auto/auto_8012E678.cpp"),
-            Object(NonMatching, "auto/auto_8012F770.cpp"),
+            Object(NonMatching, "CTTR/BrakeMotif.cpp"),
             Object(NonMatching, "auto/auto_8012F930.cpp"),
             Object(NonMatching, "auto/auto_801338FC.cpp"),
             Object(NonMatching, "auto/auto_80138744.cpp"),
@@ -446,7 +446,7 @@ config.libs = [
             Object(NonMatching, "auto/auto_8016AE44.cpp"),
             Object(NonMatching, "auto/auto_80173820.cpp"),
             Object(NonMatching, "auto/auto_80174DEC.cpp"),
-            Object(NonMatching, "auto/auto_801779E4.cpp"),
+            Object(NonMatching, "CTTR/Wheel.cpp"),
             Object(NonMatching, "auto/auto_80179F5C.cpp"),
             Object(NonMatching, "auto/auto_8017A1DC.cpp"),
             Object(NonMatching, "auto/auto_8017D28C.cpp"),
@@ -631,7 +631,7 @@ config.libs = [
         ],
     },
     {
-        "lib": "Lua 5.0.2",
+        "lib": "Lua 5.0",
         "mw_version": "GC/2.6",
         "cflags": cflags_lua,
         "progress_category": "lua",
@@ -706,6 +706,12 @@ config.libs = [
         ],
     ),
     DolphinLib(
+        "base",
+        [
+            Object(Matching, "dolphin/base/PPCArch.c")
+        ]
+    ),
+    DolphinLib(
         "card",
         [
             Object(Matching, "dolphin/card/CARDBios.c"),
@@ -727,6 +733,20 @@ config.libs = [
         ]
     ),
     DolphinLib(
+        "db",
+        [
+            Object(Matching, "dolphin/db/db.c"),
+        ]
+    ),
+    DolphinLib(
+        "dsp",
+        [
+            Object(Matching, "dolphin/dsp/dsp.c"),
+            Object(Matching, "dolphin/dsp/dsp_debug.c"),
+            Object(Matching, "dolphin/dsp/dsp_task.c"),
+        ],
+    ),
+    DolphinLib(
         "dvd",
         [
             Object(Matching, "dolphin/dvd/dvdlow.c"),
@@ -737,14 +757,6 @@ config.libs = [
             Object(Matching, "dolphin/dvd/dvdidutils.c"),
             Object(Matching, "dolphin/dvd/dvdFatal.c"),
             Object(Matching, "dolphin/dvd/fstload.c"),
-        ],
-    ),
-    DolphinLib(
-        "dsp",
-        [
-            Object(Matching, "dolphin/dsp/dsp.c"),
-            Object(Matching, "dolphin/dsp/dsp_debug.c"),
-            Object(Matching, "dolphin/dsp/dsp_task.c"),
         ],
     ),
     DolphinLib(
