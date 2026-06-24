@@ -3,7 +3,7 @@
 
 namespace core {
 struct IRefCount {
-    ~IRefCount() {}
+    virtual ~IRefCount() {}
 };
 } // namespace core
 
