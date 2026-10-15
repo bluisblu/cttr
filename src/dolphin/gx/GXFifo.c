@@ -586,7 +586,7 @@ volatile void* GXRedirectWriteGatherPipe(void* ptr) {
     GX_SET_PI_REG(3, 0);
     GX_SET_PI_REG(4, 0x04000000);
     SET_REG_FIELD(LINE(1527, 1527, 1584), reg, 21, 5, ((u32)ptr & 0x3FFFFFFF) >> 5);
-    reg &= 0xFBFFFFFF;
+    SET_REG_FIELD(0, reg, 1, 26, 0);
     GX_SET_PI_REG(5, reg);
 
     PPCSync();
@@ -594,7 +594,6 @@ volatile void* GXRedirectWriteGatherPipe(void* ptr) {
     return (volatile void *)GXFIFO_ADDR;
 }
 
-// NONMATCHING
 void GXRestoreWriteGatherPipe(void) {
     u32 reg = 0;
     u32 i;
@@ -617,7 +616,7 @@ void GXRestoreWriteGatherPipe(void) {
     GX_SET_PI_REG(3, (u32)CPUFifo->base & 0x3FFFFFFF);
     GX_SET_PI_REG(4, (u32)CPUFifo->top & 0x3FFFFFFF);
     SET_REG_FIELD(1578, reg, 21, 5, ((u32)CPUFifo->wrPtr & 0x3FFFFFFF) >> 5);
-    reg &= 0xFBFFFFFF;
+    SET_REG_FIELD(0, reg, 1, 26, 0);
     GX_SET_PI_REG(5, reg);
     if (CPGPLinked) {
         __GXWriteFifoIntReset(1, 1);

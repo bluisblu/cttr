@@ -311,6 +311,7 @@ cflags_dolphin = [
     "-i src/dolphin/vi",
     "-D__GEKKO__",
     "-DSDK_REVISION=3",
+    "-fp_contract off",
 ]
 
 config.linker_version = "GC/2.6"
@@ -692,17 +693,17 @@ config.libs = [
             Object(Matching, "dolphin/ax/AXCL.c"),
             Object(Matching, "dolphin/ax/AXOut.c"),
             Object(Matching, "dolphin/ax/AXSPB.c"),
-            Object(NonMatching, "dolphin/ax/AXVPB.c"),
-            Object(NonMatching, "dolphin/ax/AXComp.c"),
-            Object(NonMatching, "dolphin/ax/DSPCode.c"),
+            Object(Matching, "dolphin/ax/AXVPB.c"),
+            Object(Matching, "dolphin/ax/AXComp.c"),
+            Object(Matching, "dolphin/ax/DSPCode.c"),
             Object(Matching, "dolphin/ax/AXProf.c"),
         ],
     ),
     DolphinLib(
         "axfx",
         [
-            Object(NonMatching, "dolphin/axfx/reverb_hi_4ch.c"),
-            Object(NonMatching, "dolphin/axfx/reverb_hi.c"),
+            Object(Matching, "dolphin/axfx/reverb_std.c"),
+            Object(Matching, "dolphin/axfx/axfx.c"),
         ],
     ),
     DolphinLib(
@@ -763,18 +764,18 @@ config.libs = [
         "gx",
         [
             Object(Matching, "dolphin/gx/GXInit.c"),
-            Object(NonMatching, "dolphin/gx/GXFifo.c"),
+            Object(Matching, "dolphin/gx/GXFifo.c"),
             Object(Matching, "dolphin/gx/GXAttr.c"),
             Object(Matching, "dolphin/gx/GXMisc.c"),
             Object(Matching, "dolphin/gx/GXGeometry.c"),
             Object(Matching, "dolphin/gx/GXFrameBuf.c"),
-            Object(NonMatching, "dolphin/gx/GXLight.c"),
+            Object(Matching, "dolphin/gx/GXLight.c"),
             Object(Matching, "dolphin/gx/GXTexture.c"),
             Object(Matching, "dolphin/gx/GXBump.c"),
             Object(Matching, "dolphin/gx/GXTev.c"),
             Object(Matching, "dolphin/gx/GXPixel.c"),
             Object(Matching, "dolphin/gx/GXDisplayList.c"),
-            Object(NonMatching, "dolphin/gx/GXTransform.c"),
+            Object(Matching, "dolphin/gx/GXTransform.c"),
             Object(Matching, "dolphin/gx/GXPerf.c")
         ]
     ),
@@ -801,9 +802,9 @@ config.libs = [
             Object(Matching, "dolphin/os/OSAudioSystem.c"),
             Object(Matching, "dolphin/os/OSCache.c"),
             Object(Matching, "dolphin/os/OSContext.c"),
-            Object(NonMatching, "dolphin/os/OSError.c"),
+            Object(Matching, "dolphin/os/OSError.c"),
             Object(Matching, "dolphin/os/OSExec.c"),
-            Object(NonMatching, "dolphin/os/OSFatal.c"),
+            Object(Matching, "dolphin/os/OSFatal.c"),
             Object(Matching, "dolphin/os/OSFont.c"),
             Object(Matching, "dolphin/os/OSInterrupt.c"),
             Object(Matching, "dolphin/os/OSLink.c"),
@@ -819,13 +820,13 @@ config.libs = [
             Object(Matching, "dolphin/os/OSTime.c"),
             Object(Matching, "dolphin/os/OSSync.c"),
             Object(NonMatching, "dolphin/os/__start.c"),
-            Object(NonMatching, "dolphin/os/__ppc_eabi_init.cpp")
+            Object(Matching, "dolphin/os/__ppc_eabi_init.cpp")
         ]
     ),
     DolphinLib(
         "pad",
         [
-            Object(NonMatching, "dolphin/pad/Padclamp.c"),
+            Object(Matching, "dolphin/pad/Padclamp.c"),
             Object(Matching, "dolphin/pad/Pad.c")
         ]
     ),

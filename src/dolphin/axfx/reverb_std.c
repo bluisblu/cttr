@@ -5,6 +5,8 @@
 
 #include "__axfx.h"
 
+extern float powf(float x, float y);
+
 // prototypes
 static void DLsetdelay(AXFX_REVSTD_DELAYLINE* dl, s32 lag);
 static int DLcreate(AXFX_REVSTD_DELAYLINE* dl, s32 max_length);
@@ -22,7 +24,9 @@ static void DLsetdelay(AXFX_REVSTD_DELAYLINE* dl, s32 lag) {
     }
 }
 
-static int DLcreate(AXFX_REVSTD_DELAYLINE* dl, s32 max_length) {
+static int DLcreate(AXFX_REVSTD_DELAYLINE* dl, s32 len) {
+    s32 max_length = len;
+
     dl->length = (max_length * 4);
     dl->inputs = __AXFXAlloc(max_length * 4);
 	ASSERTMSGLINE(49, dl->inputs, "Can't allocate the memory.");
@@ -32,7 +36,7 @@ static int DLcreate(AXFX_REVSTD_DELAYLINE* dl, s32 max_length) {
 
     memset(dl->inputs, 0, max_length * 4);
     dl->lastOutput = 0.0f;
-    DLsetdelay(dl, max_length >> 1);
+    DLsetdelay(dl, len >> 1);
     dl->inPoint = 0;
     dl->outPoint = 0;
 	return 1;
@@ -42,7 +46,6 @@ static void DLdelete(AXFX_REVSTD_DELAYLINE* dl) {
     __AXFXFree(dl->inputs);
 }
 
-// NONMATCHING RELEASE - regalloc
 static int ReverbSTDCreate(AXFX_REVSTD_WORK* rv, f32 coloration, f32 time, f32 mix, f32 damping, f32 predelay) {
     u8 i;
     u8 k;

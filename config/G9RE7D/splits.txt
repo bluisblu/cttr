@@ -1286,6 +1286,7 @@ dolphin/os/OSContext.c:
 dolphin/os/OSError.c:
 	.text       start:0x803453C0 end:0x80345A6C
 	.data       start:0x804035D0 end:0x804038EC
+	.bss        start:0x8047D790 end:0x8047D7D8
 	.sdata      start:0x804AD3C0 end:0x804AD3C8
 
 dolphin/os/OSExec.c:
@@ -1489,15 +1490,25 @@ dolphin/ax/AXVPB.c:
 	.sbss       start:0x804AED38 end:0x804AED48
 	.sdata2     start:0x804B2320 end:0x804B2328
 
+dolphin/ax/AXComp.c:
+	.data       start:0x804052C0 end:0x80406D00
+
+dolphin/ax/DSPCode.c:
+	.data       start:0x80406D00 end:0x80408C00
+	.sdata      start:0x804AD480 end:0x804AD488
+
 dolphin/ax/AXProf.c:
 	.text       start:0x8035A0A4 end:0x8035A0EC
 	.sbss       start:0x804AED48 end:0x804AED58
 
-dolphin/axfx/reverb_hi_4ch.c:
-	.text       start:0x8035A0EC end:0x8035AD54
+dolphin/axfx/reverb_std.c:
+	.text       start:0x8035A0EC end:0x8035AD84
+	.data       start:0x80408C00 end:0x80408C10
+	.sdata2     start:0x804B2328 end:0x804B2360
 
-auto/auto_8035AD54.cpp:
-	.text       start:0x8035AD54 end:0x8035ADE0
+dolphin/axfx/axfx.c:
+	.text       start:0x8035AD84 end:0x8035ADE0
+	.sdata      start:0x804AD488 end:0x804AD490
 
 dolphin/mix/mix.c:
 	.text       start:0x8035ADE0 end:0x8035BFE4
@@ -1585,6 +1596,7 @@ dolphin/gx/GXInit.c:
 
 dolphin/gx/GXFifo.c:
 	.text       start:0x80364F6C end:0x80365974
+	.sbss       start:0x804AEDB8 end:0x804AEDD8
 
 dolphin/gx/GXAttr.c:
 	.text       start:0x80365974 end:0x8036666C
@@ -1605,6 +1617,7 @@ dolphin/gx/GXFrameBuf.c:
 
 dolphin/gx/GXLight.c:
 	.text       start:0x80367BC8 end:0x80368038
+	.sdata2     start:0x804B2390 end:0x804B23B0
 
 dolphin/gx/GXTexture.c:
 	.text       start:0x80368038 end:0x80369058
@@ -1630,7 +1643,7 @@ dolphin/gx/GXDisplayList.c:
 
 dolphin/gx/GXTransform.c:
 	.text       start:0x8036A234 end:0x8036A7C8
-	.sdata2     start:0x804B2418 end:0x804B2424
+	.sdata2     start:0x804B2418 end:0x804B2428
 
 dolphin/gx/GXPerf.c:
 	.text       start:0x8036A7C8 end:0x8036B020
