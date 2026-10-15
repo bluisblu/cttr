@@ -650,7 +650,7 @@ config.libs = [
             Object(NonMatching, "lua/src/lmem.c"),
             Object(NonMatching, "lua/src/lobject.c"),
             Object(NonMatching, "lua/src/lparser.c"),
-            Object(NonMatching, "lua/src/lstate.c"),
+            Object(Matching, "lua/src/lstate.c"),
             Object(Matching, "lua/src/lstring.c"),
             Object(NonMatching, "lua/src/lib/lstrlib.c"),
             Object(NonMatching, "lua/src/ltable.c"),

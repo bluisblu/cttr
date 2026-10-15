@@ -58,6 +58,8 @@ typedef struct lua_TObject {
   Value value;
 } TObject;
 
+void fn_802BBD64(Value *dst, const Value *src);
+
 /* Macros to test type */
 #define ttisnil(o) (ttype(o) == LUA_TNIL)
 #define ttisnumber(o) (ttype(o) == LUA_TNUMBER)
@@ -162,7 +164,7 @@ typedef struct lua_TObject {
     TObject *o1 = (obj1);                                                      \
     checkconsistency(o2);                                                      \
     o1->tt = o2->tt;                                                           \
-    o1->value = o2->value;                                                     \
+    fn_802BBD64(&o1->value, &o2->value);                                       \
   }
 
 /*

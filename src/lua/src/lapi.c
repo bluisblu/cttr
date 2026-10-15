@@ -90,6 +90,8 @@ void luaA_pushobject(lua_State *L, const TObject *o) {
   incr_top(L);
 }
 
+void fn_802BBD64(Value *dst, const Value *src) { *dst = *src; }
+
 LUA_API int lua_checkstack(lua_State *L, int size) {
   int res;
   lua_lock(L);

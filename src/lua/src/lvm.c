@@ -574,7 +574,7 @@ StkId luaV_execute (lua_State *L) {
         break;
       }
       case OP_NOT: {
-        int res = l_isfalse(RB(i));  /* next assignment may change this value */
+        lu_byte res = l_isfalse(RB(i));
         setbvalue(ra, res);
         break;
       }
@@ -592,7 +592,7 @@ StkId luaV_execute (lua_State *L) {
         break;
       }
       case OP_EQ: {
-        if (equalobj(L, RKB(i), RKC(i)) != GETARG_A(i)) pc++;
+        if (cast(lu_byte, equalobj(L, RKB(i), RKC(i))) != GETARG_A(i)) pc++;
         else dojump(pc, GETARG_sBx(*pc) + 1);
         break;
       }
@@ -608,7 +608,7 @@ StkId luaV_execute (lua_State *L) {
       }
       case OP_TEST: {
         TObject *rb = RB(i);
-        if (l_isfalse(rb) == GETARG_C(i)) pc++;
+        if (cast(lu_byte, l_isfalse(rb)) == GETARG_C(i)) pc++;
         else {
           setobjs2s(ra, rb);
           dojump(pc, GETARG_sBx(*pc) + 1);
@@ -696,7 +696,7 @@ StkId luaV_execute (lua_State *L) {
         step = nvalue(pstep);
         idx = nvalue(ra) + step;  /* increment index */
         limit = nvalue(plimit);
-        if (step > 0 ? idx <= limit : idx >= limit) {
+        if (cast(lu_byte, step > 0 ? idx <= limit : idx >= limit)) {
           dojump(pc, GETARG_sBx(i));  /* jump back */
           chgnvalue(ra, idx);  /* update index */
         }
